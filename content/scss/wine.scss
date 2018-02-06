@@ -60,10 +60,40 @@ header {
 
 .photography {
   padding: 60px 0;
-  li{
-      margin-bottom: 10px;
+  // li {
+  //   margin-bottom: 10px;
+  // }
+  @media screen and (max-width: 768px) {
+    ul {
+      font-size: 0;
+      overflow: auto;
+
+    }
+    li {
+      float: left;
+      &:nth-child(3n + 1)  {
+        width:calc(100% / 3 * 2 - 8px);
+      }
+      &:nth-child(3n),&:nth-child(3n + 2){
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3 - 6px)
+      }
+
+      height: 0;
+      padding-top: calc(100% / 3 * 2 - 8px);
+      position: relative;
+      margin: 2px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+    }
   }
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 769px) {
     ul {
       height: 920px;
     }
@@ -87,7 +117,7 @@ header {
 // winebook
 
 .winebook {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     li {
       &:nth-child(2n) {
         transform: translateY(30px);

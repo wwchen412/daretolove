@@ -51,9 +51,27 @@ header .title {
 
 .photography {
   padding: 60px 0; }
-  .photography li {
-    margin-bottom: 10px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
+    .photography ul {
+      font-size: 0;
+      overflow: auto; }
+    .photography li {
+      float: left;
+      height: 0;
+      padding-top: calc(100% / 3 * 2 - 8px);
+      position: relative;
+      margin: 2px; }
+      .photography li:nth-child(3n + 1) {
+        width: calc(100% / 3 * 2 - 8px); }
+      .photography li:nth-child(3n), .photography li:nth-child(3n + 2) {
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3 - 6px); }
+      .photography li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%; } }
+  @media screen and (min-width: 769px) {
     .photography ul {
       height: 920px; }
     .photography li {
@@ -71,7 +89,7 @@ header .title {
       -o-object-position: center;
       object-position: center; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .winebook li:nth-child(2n) {
     -webkit-transform: translateY(30px);
     -ms-transform: translateY(30px);
