@@ -38,41 +38,45 @@ header .title {
   display: block;
   margin: 0 auto;
   width: 300px; }
-  .section-title:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 30px;
-    background-color: #000;
-    bottom: -15px;
-    left: 50%; }
+  @media screen and (min-width: 768px) {
+    .section-title:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 30px;
+      background-color: #000;
+      bottom: -15px;
+      left: 50%; } }
 
 .photography {
   padding: 60px 0; }
-  .photography ul {
-    height: 920px; }
   .photography li {
-    width: calc(100% / 3 - 10px);
-    margin: 0 10px 10px 0;
-    height: 450px; }
-    .photography li:nth-child(3), .photography li:nth-child(4) {
-      -webkit-transform: translateY(3rem);
-      -ms-transform: translateY(3rem);
-      transform: translateY(3rem); }
-  .photography img {
-    height: 100%;
+    margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .photography ul {
+      height: 920px; }
+    .photography li {
+      width: calc(100% / 3 - 10px);
+      margin: 0 10px 10px 0;
+      height: 450px; }
+      .photography li:nth-child(3), .photography li:nth-child(4) {
+        -webkit-transform: translateY(3rem);
+        -ms-transform: translateY(3rem);
+        transform: translateY(3rem); }
+    .photography img {
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center; } }
+
+@media screen and (min-width: 768px) {
+  .winebook li:nth-child(2n) {
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px); }
+  .winebook img {
+    height: 350px;
     -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center; }
-
-.winebook li:nth-child(2n) {
-  -webkit-transform: translateY(30px);
-  -ms-transform: translateY(30px);
-  transform: translateY(30px); }
-
-.winebook img {
-  height: 350px;
-  -o-object-fit: cover;
-  object-fit: cover; }
+    object-fit: cover; } }
