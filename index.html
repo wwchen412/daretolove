@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css">
+
 </head>
 
 <body>
@@ -15,45 +16,50 @@
         <!-- header -->
         <div class="row no-gutters">
             <div class="col-12">
-                <header style="height:100vh;background:url('content/img/bg.png') 50% 50%;background-size:cover" class="p-3 position-relative">
-                    <nav>
-                        <ul class="nav pills nav-stacked">
-                            <li class="nav-item mr-auto">
-                                <a href="#" class="nav-link text-light">
+                <header class="position-relative">
+                    <nav class="position-absolute p-md-2">
+
+                        <div class="d-md-flex" style="width:100%">
+                            <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                <a href="#" class="d-inline-block p-2 text-light">
                                     <img src="content/img/title.svg" alt="" width="150px">
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light active">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light">Movie</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light">Gallery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light">Dare to love</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light">Wine book</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light">Music</a>
-                            </li>
-                        </ul>
+                                <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                    <img src="content/img/menu.svg" alt="" width="30px">
+                                </a>
+                            </div>
+                            <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light active">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light">Movie</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light">Dare to love</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light">Wine book</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-block p-2 text-light">Music</a>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
-                    <div class="title text-light position-absolute">
+                    <!-- <div class="title text-light position-absolute">
                         <h2>勇敢。愛 </h2>
                         <h2 class="mt-5"> 我的心情，我的酒</h2>
+                    </div> -->
+                    <div class="heroImg">
+                        <img src="content/img/bg.png" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/bg_m.png" alt="" class="img-fluid d-block d-md-none">
                     </div>
                 </header>
             </div>
-
-
-
-
-
 
         </div>
 
@@ -63,12 +69,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="margin-top:-100px;border:10px solid #fff">
-                            <!-- <ol class="carousel-indicators">
-                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselId" data-slide-to="1"></li>
-                            <li data-target="#carouselId" data-slide-to="2"></li>
-                        </ol> -->
+                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="b">
+
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
                                     <div class="embed-responsive embed-responsive-16by9">
@@ -98,12 +100,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <a class="carousel-control-prev d-none d-md-flex" href="#carouselId" role="button" data-slide="prev">
+                                <img src="content/img/prev.svg" alt="" class="img-fluid">
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <a class="carousel-control-next d-none d-md-flex" href="#carouselId" role="button" data-slide="next">
+                                <img src="content/img/next.svg" alt="" class="img-fluid">
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
@@ -150,7 +152,7 @@
                     <h3 class="text-center">Event</h3>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 offset-md-1 mt-5">
+                    <div class="col-md-10 offset-md-1 mt-md-5">
                         <img src="content/img/event.png" alt="" class="img-fluid">
                         <p class="py-3">分享你的愛情故事照片，選擇你當下的心情與劇中出現的金門高粱酒調酒並且對照片寫下當時的心得，並分享至你的臉書塗鴉牆。</p>
                     </div>
@@ -167,28 +169,28 @@
         <div class="winebook">
             <div class="container">
                 <div class="section-title">
-                    <h3 class="text-center">Event</h3>
+                    <h3 class="text-center">Wine book</h3>
                 </div>
-                <ul class="row no-gutters list-unstyled py-5">
-                    <li class="col-md-3 px-1">
+                <ul class="row no-gutters list-unstyled py-md-5">
+                    <li class="col-md-3 col-8 px-1">
                         <a href="" class="text-dark">
                             <img src="content/img/wine.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </li>
-                    <li class="col-md-3 px-1">
+                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_1.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </li>
-                    <li class="col-md-3 px-1">
+                    <li class="col-md-3 col-8 px-1">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_2.png" alt="" class="img-fluid">
                             <p>Gin or Vodka and Tonic</p>
                         </a>
                     </li>
-                    <li class="col-md-3 px-1">
+                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_3.png" alt="" class="img-fluid">
                             <p>Gin or Vodka and Tonic</p>
@@ -198,14 +200,32 @@
             </div>
 
         </div>
-
+        <footer class="text-center">
+            <a href="">
+                <img src="content/img/logo.svg" alt="">
+                <p class="text-secondary py-sm-3">Copyright © 2017 . All Rights Reserved.</p>
+            </a>
+        </footer>
     </div>
+    
+    <!-- jQuery JS 1.12.4 -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#menu').click(function () {
+               $('nav').toggleClass('active');
+               $('body').toggleClass('active');
+            });
+        })
+
+    </script>
 </body>
 
 </html>
