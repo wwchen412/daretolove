@@ -15,12 +15,35 @@ header .heroImg {
     -o-object-fit: cover;
     object-fit: cover; }
 
+@-webkit-keyframes nav {
+  0% {
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+    opacity: 1; } }
+
+@keyframes nav {
+  0% {
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+    opacity: 1; } }
+
 header nav {
   width: 100%; }
   @media screen and (max-width: 768px) {
     header nav.active {
       background: rgba(0, 0, 0, 0.7);
-      height: 100vh; }
+      height: 100vh;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
       header nav.active ul.nav {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -31,7 +54,10 @@ header nav {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        height: calc(100vh - 59px); } }
+        height: calc(100vh - 59px); }
+        header nav.active ul.nav li {
+          -webkit-animation: nav 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: nav 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); } }
   header nav ul.nav {
     display: -webkit-box;
     display: -ms-flexbox;
