@@ -7,6 +7,10 @@ html {
     height: 100%;
     overflow: hidden; }
 
+header nav > div {
+  max-width: 1170px;
+  margin: auto; }
+
 header .heroImg {
   height: 100vh; }
   header .heroImg img {
@@ -126,7 +130,8 @@ header nav {
       left: 50%; } }
 
 .photography {
-  padding: 30px 0; }
+  padding: 30px 0;
+  margin: 60px 0; }
   @media screen and (max-width: 768px) {
     .photography {
       padding: 0; }
@@ -172,6 +177,10 @@ header nav {
       object-fit: cover;
       -o-object-position: center;
       object-position: center; } }
+
+.event {
+  margin: 60px 0;
+  padding: 60px 0; }
 
 @media screen and (min-width: 769px) {
   .winebook li:nth-child(2n) {

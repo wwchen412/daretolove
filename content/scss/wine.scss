@@ -29,6 +29,10 @@ header {
   //     font-weight: 100;
   //   }
   // }
+  nav > div{
+    max-width: 1170px;
+    margin: auto;
+  }
   .heroImg {
     height: 100vh;
     img {
@@ -141,7 +145,7 @@ header {
 
 .photography {
   padding: 30px 0;
-
+  margin: 60px 0;
   // li {
   //   margin-bottom: 10px;
   // }
@@ -206,7 +210,10 @@ header {
     }
   }
 }
-
+.event{
+  margin: 60px 0;
+  padding:60px 0;
+}
 // winebook
 
 .winebook {
