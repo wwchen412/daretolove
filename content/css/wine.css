@@ -23,13 +23,11 @@ header .title {
     font-weight: 100; }
 
 header nav {
-  z-index: 99; }
-
-header nav > div {
-  max-width: 1170px;
-  margin: auto; }
+  z-index: 99;
+  position: relative; }
 
 header .heroImg {
+  margin-top: -59px;
   height: 100vh; }
   header .heroImg img {
     width: 100%;

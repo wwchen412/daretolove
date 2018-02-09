@@ -31,12 +31,12 @@ header {
   }
   nav{
     z-index: 99;
+    position: relative;
   }
-  nav > div{
-    max-width: 1170px;
-    margin: auto;
-  }
+ 
+  
   .heroImg {
+    margin-top: -59px;
     height: 100vh;
     img {
       width: 100%;
