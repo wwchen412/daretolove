@@ -69,7 +69,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="b">
+                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="">
 
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
@@ -122,24 +122,24 @@
                     <h3 class="text-center">Photography</h3>
                 </div>
 
-                <ul class="d-md-flex list-unstyled flex-wrap flex-column">
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB1_1676.jpg" alt="">
+                <ul class="d-md-flex list-unstyled flex-wrap flex-column dramaPics">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB1_1676.jpg" alt=""></a>
                     </li>
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB4_2881.jpg" alt="">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB4_2881.jpg" alt=""></a>
                     </li>
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB2_3720.jpg" alt="">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB2_3720.jpg" alt=""></a>
                     </li>
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB1_1558.jpg" alt="">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB1_1558.jpg" alt=""></a>
                     </li>
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB1_6567.jpg" alt="">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB1_6567.jpg" alt=""></a>
                     </li>
-                    <li>
-                        <img class="img-fluid" src="content/img/pics/RB2_3919.jpg" alt="">
+                    <li class="fadeIn">
+                        <a href="" data-toggle="modal" data-target="#picModal"><img class="img-fluid" src="content/img/pics/RB2_3919.jpg" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -172,25 +172,25 @@
                     <h3 class="text-center">Wine book</h3>
                 </div>
                 <ul class="row no-gutters list-unstyled py-md-5">
-                    <li class="col-md-3 col-8 px-1">
+                    <li class="col-md-3 col-8 px-1 fadeIn">
                         <a href="" class="text-dark">
                             <img src="content/img/wine.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </li>
-                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0">
+                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_1.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </li>
-                    <li class="col-md-3 col-8 px-1">
+                    <li class="col-md-3 col-8 px-1 fadeIn">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_2.png" alt="" class="img-fluid">
                             <p>Gin or Vodka and Tonic</p>
                         </a>
                     </li>
-                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0">
+                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
                         <a href="" class="text-dark">
                             <img src="content/img/wine_3.png" alt="" class="img-fluid">
                             <p>Gin or Vodka and Tonic</p>
@@ -206,6 +206,27 @@
                 <p class="text-secondary py-sm-3">Copyright © 2017 . All Rights Reserved.</p>
             </a>
         </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content  border-0" style="background:transparent">
+                    <div class="modal-header border-0 p-3">
+                        <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="content/img/pics/RB1_1676.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="modal-footer border-0">
+                        <a href="" class=""><img src="content/img/download.svg" alt=""></a>
+                        <a  class=""><img src="content/img/share.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
     </div>
     
     <!-- jQuery JS 1.12.4 -->
@@ -223,8 +244,31 @@
                $('nav').toggleClass('active');
                $('body').toggleClass('active');
             });
-        })
+            // 點劇照換照片
+            $('.dramaPics li a').each(function(){
+                $(this).click(function(){
+                    event.preventDefault();
+                    var imgSrc = $(this).find('img').attr('src');
+                    // console.log(imgSrc);
+                    $('#picModal .modal-body img').attr('src', imgSrc);
+                })
+                
+            })
+            $(window).scroll(function(){
+            
+                
+                $('.fadeIn').each(function(){
+                    // console.log(this);
+                     var bottom_of_fadeIn = $(this).position().top + $(this).outerHeight();
+                     var bottom_of_window = $(window).scrollTop() + $(window).height();
+                      if (bottom_of_window > bottom_of_fadeIn) {
 
+                        $(this).animate({ 'opacity': '1' }, 1500);
+
+                    }
+                })
+            })
+        })
     </script>
 </body>
 

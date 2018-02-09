@@ -222,9 +222,27 @@ header {
     }
   }
 }
+.modal{
+  background-color: rgba(0,0,0,.8);
+}
+.modal-footer a{
+  display: inline-block;
+  vertical-align: top;
+img{
+  width: 30px;
+}
+}
+ 
 
 footer {
   img {
     max-width: 50px;
   }
+}
+
+
+
+
+.fadeIn{
+  opacity: 0;
 }
