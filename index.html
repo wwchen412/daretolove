@@ -267,7 +267,7 @@
                         <img src="content/img/pics/RB1_1676.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="modal-footer border-0">
-                        <a href="" class="downloadImg" download="">
+                        <a href="" class="downloadImg" download>
                             <img src="content/img/download.svg" alt="">
                         </a>
                         <a class="">
@@ -305,12 +305,13 @@
                 $(this).click(function () {
                     event.preventDefault();
                     var imgSrc = $(this).find('img').attr('src');
-                    // console.log(imgSrc);
+                  
                     $('#picModal .modal-body img').attr('src', imgSrc);
-                    $('#picModal .downloadImg').attr('download', imgSrc);
+                    $('#picModal .downloadImg').attr('href', imgSrc);
                 })
 
             })
+            
             $(window).scroll(function () {
 
 
