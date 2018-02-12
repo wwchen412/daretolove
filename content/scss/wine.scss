@@ -9,8 +9,7 @@ html {
 }
 
 $colormain: #9dd1dc;
-#wrap {
-}
+
 
 // header
 header {
@@ -80,27 +79,27 @@ header {
   }
 }
 
+// slider
 
-.sliderblock {
-  .carousel {
+ .swiper-container.slideblock {
     border: 10px solid #fff;
     margin-top: -100px;
-    .carousel-control-prev,
-    .carousel-control-next {
+    .swiper-button-prev,
+    .cswiper-button-next {
       width: 50px;
       transform: translate(-30px, -10%);
     }
-    .carousel-control-next {
+    .swiper-button-next {
       transform: translate(30px, -10%);
     }
   }
   @media screen and (max-width: 768px) {
     padding: 1.5rem 1rem 0;
-    .carousel {
+    .swiper-wrapper {
       margin-top: 0;
     }
   }
-}
+
 
 .bgmain {
   position: relative;

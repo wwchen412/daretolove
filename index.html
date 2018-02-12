@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css">
-
+    <link rel="stylesheet" href="content/css/swiper.min.css">
 </head>
 
 <body>
@@ -75,31 +75,60 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="">
+                        <div class="swiper-container slideblock">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="content/img/pics/RB2_3902.jpg" alt="" class="img-fluid">
+                                    <div class="text-center py-3 bg-white">
+                                        <h3>第5杯酒</h3>
+                                        <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="content/img/pics/RB2_3902.jpg" alt="" class="img-fluid">
+                                    <div class="text-center py-3 bg-white">
+                                        <h3>第5杯酒</h3>
+                                        <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="content/img/pics/RB2_3902.jpg" alt="" class="img-fluid">
+                                    <div class="text-center py-3 bg-white">
+                                        <h3>第5杯酒</h3>
+                                        <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-prev">
+                                <img src="content/img/prev.svg" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img src="content/img/next.svg" alt="" class="img-fluid">
+                            </div>
+
+                        </div>
+                        <!-- <div id="carouselId" class="carousel slide" data-ride="carousel" style="">
 
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                                    </div>
+                                    <img src="content/img/pics/RB2_3902.jpg" alt="" class="img-fluid">
                                     <div class="text-center py-3 bg-white">
                                         <h3>第5杯酒</h3>
                                         <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                                    </div>
+
                                     <div class="text-center py-3 bg-white">
                                         <h3>第5杯酒</h3>
                                         <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                                    </div>
+
                                     <div class="text-center py-3 bg-white">
                                         <h3>第5杯酒</h3>
                                         <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。</p>
@@ -114,7 +143,7 @@
                                 <img src="content/img/next.svg" alt="" class="img-fluid">
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -164,7 +193,7 @@
         </div>
 
         <!-- 活動 -->
-        <div class="event bgmain">
+        <!-- <div class="event bgmain">
             <div class="container">
                 <div class="section-title">
                     <h3 class="text-center">Event</h3>
@@ -181,7 +210,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- winebook -->
         <div class="winebook">
@@ -238,7 +267,7 @@
                         <img src="content/img/pics/RB1_1676.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="modal-footer border-0">
-                        <a href="" class="">
+                        <a href="" class="downloadImg" download="">
                             <img src="content/img/download.svg" alt="">
                         </a>
                         <a class="">
@@ -260,6 +289,11 @@
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <!-- swiper -->
+    <script src="script/swiper.min.js"></script>
+
     <script type="text/javascript">
         $(function () {
             $('#menu').click(function () {
@@ -273,6 +307,7 @@
                     var imgSrc = $(this).find('img').attr('src');
                     // console.log(imgSrc);
                     $('#picModal .modal-body img').attr('src', imgSrc);
+                    $('#picModal .downloadImg').attr('download', imgSrc);
                 })
 
             })

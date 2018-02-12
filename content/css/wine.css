@@ -86,25 +86,24 @@ header nav {
       header nav ul.nav {
         display: none; } }
 
-.sliderblock .carousel {
+.swiper-container.slideblock {
   border: 10px solid #fff;
   margin-top: -100px; }
-  .sliderblock .carousel .carousel-control-prev,
-  .sliderblock .carousel .carousel-control-next {
+  .swiper-container.slideblock .swiper-button-prev,
+  .swiper-container.slideblock .cswiper-button-next {
     width: 50px;
     -webkit-transform: translate(-30px, -10%);
     -ms-transform: translate(-30px, -10%);
     transform: translate(-30px, -10%); }
-  .sliderblock .carousel .carousel-control-next {
+  .swiper-container.slideblock .swiper-button-next {
     -webkit-transform: translate(30px, -10%);
     -ms-transform: translate(30px, -10%);
     transform: translate(30px, -10%); }
 
 @media screen and (max-width: 768px) {
-  .sliderblock {
-    padding: 1.5rem 1rem 0; }
-    .sliderblock .carousel {
-      margin-top: 0; } }
+  padding: 1.5rem 1rem 0;
+  .swiper-wrapper {
+    margin-top: 0; } }
 
 .bgmain {
   position: relative; }
