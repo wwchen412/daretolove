@@ -18,6 +18,8 @@ header {
     right: 50px;
     top: 30%;
     letter-spacing: 10px;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
     @media screen and (max-width:768px){
       top: 20%;
       right: 20px;
@@ -37,6 +39,16 @@ header {
   .heroImg {
     margin-top: -59px;
     height: 100vh;
+    position: relative;
+    &:after{
+      content:"";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom,transparent , transparent,#fff);
+    }
     img {
       width: 100%;
       height: 100%;
@@ -59,6 +71,9 @@ header {
         background: rgba(black, 0.7);
         height: 100vh; 
         transition: .5s;
+        position: absolute;
+        left: 0;
+    top: 59px;
         ul.nav {
           display: flex;
           align-items: center;
@@ -81,9 +96,11 @@ header {
 
 // slider
 
- .swiper-container.slideblock {
+.slideblock {
     border: 10px solid #fff;
     margin-top: -100px;
+    background-color: #fff;
+    box-shadow: 3px 3px 15px 1px rgba(175,175,175,.1);
     .swiper-button-prev,
     .cswiper-button-next {
       width: 50px;
@@ -103,26 +120,26 @@ header {
 
 .bgmain {
   position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: $colormain;
-  }
-  &.event {
-    &:before {
-      height: 30%;
-      top: 50%;
-      transform: translate(0, -50%);
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   display: block;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 50%;
+  //   background-color: $colormain;
+  // }
+  // &.event {
+  //   &:before {
+  //     height: 30%;
+  //     top: 50%;
+  //     transform: translate(0, -50%);
+  //     @media screen and (max-width: 768px) {
+  //       display: none;
+  //     }
+  //   }
+  // }
 }
 .section-title {
   padding: 1rem 0;
@@ -194,13 +211,13 @@ header {
 
   @media screen and (min-width: 769px) {
     ul {
-      height: 920px;
+      
+      // height: 1480px;
     }
     li {
       width: calc(100% / 3 - 10px);
       margin: 0 10px 10px 0;
-      &:nth-child(3),
-      &:nth-child(4) {
+      &:nth-child(3n+2){
         transform: translateY(3rem);
       }
       height: 450px;
@@ -226,7 +243,7 @@ header {
       }
     }
     img {
-      height: 350px;
+      // height: 350px;
       object-fit: cover;
     }
   }
