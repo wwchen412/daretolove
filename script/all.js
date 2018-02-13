@@ -36,7 +36,7 @@ $(".shareBtn").on("click", function() {
     {
       method: "share",
       mobile_iframe: true,
-      href: "https://wwchen412.github.io/daretolove/#movie"
+      href: "https://daretolove.wwmt.com.tw/daretolove/#movie"
     },
     function(response) {
       alert("分享完成！");
