@@ -259,13 +259,8 @@
                             <img src="content/img/download.svg" alt="">
                         </a>
 
-                        <a class="">
-                            <div class="fb-share-button" data-href="https://wwchen412.github.io/daretolove/" data-layout="button" data-size="small" data-mobile-iframe="true">
-                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fdaretolove%2F&amp;src=sdkpreparse"
-                                    class="fb-xfbml-parse-ignore">
-                                    <img src="content/img/share.svg" alt="">
-                                </a>
-                            </div>
+                        <a href="" class="shareBtn">
+                            <img src="content/img/share.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -299,14 +294,14 @@
     </div>
 
     <!-- jQuery JS 1.12.4 -->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
 
 
     <script type="text/javascript">
@@ -344,13 +339,7 @@
                 })
             })
 
-            var $location = window.location.href;
-            var $locationArray = $location.split('/');
-            var lastHash = $locationArray[$locationArray.length - 1];
-            console.log(lastHash);
-            if(lastHash =='#movie' ){
-                 $("#movieModal").modal("show");
-            }
+            
         })
         // fb分享
         document.querySelector('.shareBtn').onclick = function () {
@@ -360,6 +349,17 @@
                 href: 'https://wwchen412.github.io/daretolove/#movie',
             }, function (response) { });
         }
+
+        // movie
+        var $location = window.location.href;
+            var $locationArray = $location.split('/');
+            var lastHash = $locationArray[$locationArray.length - 1];
+            console.log(lastHash);
+           if (lastHash =='#movie'){
+               $("#movieModal").modal('show');
+           }
+           
+            
     </script>
 </body>
 
