@@ -5,13 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- fb OG -->
+    <meta property="og:url" content="https://wwchen412.github.io/daretolove/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dare to Love" />
+    <meta property="og:description" content="金門酒廠 我的心情我的酒" />
+    <meta property="og:image" content="https://wwchen412.github.io/daretolove/content/img/bg.png" />
+
+    <title>Dare to love</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css">
-    <link rel="stylesheet" href="content/css/swiper.min.css">
+
+    
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+   <div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=288053411702507&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
     <div id="wrap">
         <!-- header -->
         <div class="row no-gutters">
@@ -61,8 +80,8 @@
                         <h2 class="mt-5"> 我的心情，我的酒</h2>
                     </div>
                     <div class="heroImg">
-                        <img src="content/img/pics/RB4_3025.jpg" alt="" class="img-fluid d-none d-md-block">
-                        <img src="content/img/pics/RB4_3025.jpg" alt="" class="img-fluid d-block d-md-none">
+                        <img src="content/img/bg.png" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/bg.png" alt="" class="img-fluid d-block d-md-none">
                     </div>
                 </header>
             </div>
@@ -75,18 +94,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                       
-                           <div class="row no-gutters slideblock">
-                               <div class="col-8">
-                                   <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
-                               </div>
-                               <div class="col-4">
-                                   <img src="content/img/videofont.svg" alt="" class="img-fluid">
-                               </div>
-                           </div>
 
-                        
-                       
+                        <div class="row no-gutters slideblock">
+                            <div class="col-8">
+                                <a href="" data-toggle="modal" data-target="#movieModal">
+                                    <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <img src="content/img/videofont.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
 
@@ -177,7 +198,7 @@
                     <h3 class="text-center">酒譜</h3>
                 </div>
                 <ul class="row no-gutters list-unstyled py-md-5">
-                    
+
                     <li class="col-6 px-1 fadeIn offset-3 text-center">
                         <a href="" class="text-dark">
                             <img src="content/img/wine.png" alt="" class="img-fluid">
@@ -229,8 +250,44 @@
                         <a href="" class="downloadImg" download>
                             <img src="content/img/download.svg" alt="">
                         </a>
+                       
                         <a class="">
-                            <img src="content/img/share.svg" alt="">
+                            <div class="fb-share-button" data-href="https://wwchen412.github.io/daretolove/" data-layout="button" data-size="small"
+                                data-mobile-iframe="true">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fdaretolove%2F&amp;src=sdkpreparse"
+                                    class="fb-xfbml-parse-ignore">
+                                    <img src="content/img/share.svg" alt="">
+                                </a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content  border-0" style="background:transparent">
+                    <div class="modal-header border-0 p-3">
+                        <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+
+                        <a class="">
+                            <div class="fb-share-button" data-href="https://wwchen412.github.io/daretolove/" data-layout="button" data-size="small"
+                                data-mobile-iframe="true">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fdaretolove%2F&amp;src=sdkpreparse"
+                                    class="fb-xfbml-parse-ignore"><img src="content/img/share.svg" alt=""></a>
+                            </div>
+                            
                         </a>
                     </div>
                 </div>
@@ -250,9 +307,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
-    <!-- swiper -->
-    <script src="script/swiper.min.js"></script>
-
     <script type="text/javascript">
         $(function () {
             $('#menu').click(function () {
@@ -264,23 +318,25 @@
                 $(this).click(function () {
                     event.preventDefault();
                     var imgSrc = $(this).find('img').attr('src');
-                  
+
                     $('#picModal .modal-body img').attr('src', imgSrc);
                     $('#picModal .downloadImg').attr('href', imgSrc);
                 })
 
             })
-            
+
             $(window).scroll(function () {
 
 
                 $('.fadeIn').each(function () {
                     // console.log(this);
-                    var bottom_of_fadeIn = $(this).position().top + $(this).outerHeight();
+                    var itemHeight = $(this).outerHeight() / 2;
+                    // + $(this).outerHeight()
+                    var bottom_of_fadeIn = $(this).position().top + itemHeight;
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     if (bottom_of_window > bottom_of_fadeIn) {
 
-                        $(this).animate({ 'opacity': '1' }, 1500);
+                        $(this).animate({ 'opacity': '1' }, 1000);
 
                     }
                 })

@@ -1,7 +1,11 @@
+*{
+  outline: 0;
+}
 body,
 html {
   font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體",
     "Microsoft JhengHei", sans-serif;
+  
   &.active {
     height: 100%;
     overflow: hidden;
@@ -11,7 +15,7 @@ html {
 $colormain: #9dd1dc;
 
 
-// header
+// header 首頁大圖
 header {
   .title {
     writing-mode: vertical-rl;
@@ -22,9 +26,12 @@ header {
     text-shadow: 1px 1px 3px rgba(0,0,0,.4);
     @media screen and (max-width:768px){
       top: 20%;
-      right: 20px;
+      right: 50%;
       letter-spacing: 5px;
-
+      transform: translate(50%);
+      h2{
+        font-size: 1.5rem;
+      }
     }
     h2 {
       font-weight: 100;
@@ -40,15 +47,15 @@ header {
     margin-top: -59px;
     height: 100vh;
     position: relative;
-    &:after{
-      content:"";
-      display: block;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom,transparent , transparent,#fff);
-    }
+    // &:after{
+    //   content:"";
+    //   display: block;
+    //   position: absolute;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: linear-gradient(to bottom,transparent , transparent,#fff);
+    // }
     img {
       width: 100%;
       height: 100%;
@@ -94,13 +101,13 @@ header {
   }
 }
 
-// slider
+// 每集影片導引區塊
 
 .slideblock {
     border: 10px solid #fff;
     margin-top: -100px;
     background-color: #fff;
-    box-shadow: 3px 3px 15px 1px rgba(175,175,175,.1);
+    box-shadow: 3px 3px 15px 0px rgba(150,150,150,.1);
     .swiper-button-prev,
     .cswiper-button-next {
       width: 50px;
@@ -117,7 +124,7 @@ header {
     }
   }
 
-
+// 原本有色塊
 .bgmain {
   position: relative;
   // &:before {
@@ -141,6 +148,8 @@ header {
   //   }
   // }
 }
+
+// 區塊標題
 .section-title {
   padding: 1rem 0;
   margin-bottom: 1.5rem;
@@ -162,6 +171,9 @@ header {
   }
 }
 
+
+// 劇照
+
 .photography {
   padding: 30px 0;
   margin: 60px 0;
@@ -179,18 +191,16 @@ header {
     }
     li {
       float: left;
-      &:nth-child(1),
-      &:nth-child(5) {
+      &:nth-child(6n+1),
+      &:nth-child(5){
         width: calc(100% / 3 * 2 - 4px);
       }
-      &:nth-child(3),
-      &:nth-child(2),
-      &:nth-child(4),
-      &:nth-child(6) {
+      &:nth-child(6n+3),
+      &:nth-child(2n) {
         width: calc(100% / 3 - 4px);
         padding-top: calc(100% / 3 - 6px);
       }
-      &:nth-child(6) {
+      &:nth-child(6n) {
         margin-top: calc(-100% / 3 + 3px);
       }
 
@@ -210,10 +220,7 @@ header {
   }
 
   @media screen and (min-width: 769px) {
-    ul {
-      
-      // height: 1480px;
-    }
+    
     li {
       width: calc(100% / 3 - 10px);
       margin: 0 10px 10px 0;
