@@ -344,10 +344,23 @@
         // fb分享
         $('.shareBtn').on('click',function(){
             event.preventDefault();
+            var image = $(this).parents().find('.modal-body img').attr('src');
+            console.log(image);
             FB.ui({
-                method: 'share',
+                method: 'share_open_graph',
                 mobile_iframe: true,
+                ction_type: 'og.shares',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': 'https://wwchen412.github.io/daretolove/#movie', // your url to share
+                        'og:title': 'Dare to love',
+                        'og:description': '我的心情我的酒',
+                        'og:image:url': image,
+                        'og:image:width': '1920',
+                        'og:image:height': '1200',
+                    }}),
                 href: 'https://wwchen412.github.io/daretolove/#movie',
+                
             }, function (response) { 
                 alert('分享完成！')
             });
