@@ -348,6 +348,9 @@
             var $locationArray = $location.split('/');
             var lastHash = $locationArray[$locationArray.length - 1];
             console.log(lastHash);
+            if(lastHash =='#movie' ){
+                 $("#movieModal").modal("show");
+            }
         })
         // fb分享
         document.querySelector('.shareBtn').onclick = function () {
