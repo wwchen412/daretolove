@@ -14,10 +14,14 @@ header .title {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  right: 50px;
+  right: 0;
+  left: 0;
+  max-width: 1140px;
+  margin: auto;
   top: 30%;
   letter-spacing: 10px;
   z-index: 1;
+  pointer-events: none;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
   @media screen and (max-width: 768px) {
     header .title {
@@ -34,7 +38,8 @@ header .title {
 
 header nav {
   z-index: 99;
-  position: relative; }
+  position: relative;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
 
 header .heroImg {
   margin-top: -59px;
@@ -217,3 +222,113 @@ footer img {
 
 .fadeIn {
   opacity: 0; }
+
+.winebookpage {
+  position: relative;
+  height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  z-index: -1; }
+  .wave:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+    background-image: -webkit-linear-gradient(top, transparent, #fff);
+    background-image: -o-linear-gradient(top, transparent, #fff);
+    background-image: linear-gradient(to bottom, transparent, #fff);
+    z-index: 1; }
+    @media screen and (max-width: 768px) {
+      .wave:before {
+        height: 20%; } }
+  .wave .wave-svg-shape {
+    position: absolute;
+    width: 100%;
+    bottom: -30%;
+    -webkit-animation: fill 3s  linear forwards;
+    animation: fill 3s  linear forwards; }
+    .wave .wave-svg-shape svg {
+      display: block;
+      width: 150%;
+      -webkit-transform: translate(-30%);
+      -ms-transform: translate(-30%);
+      transform: translate(-30%);
+      -webkit-animation: wave 5s  linear infinite;
+      animation: wave 5s  linear infinite; }
+      @media screen and (max-width: 768px) {
+        .wave .wave-svg-shape svg {
+          width: 300%; } }
+
+@-webkit-keyframes fill {
+  0% {
+    bottom: -100%; }
+  100% {
+    bottom: 0; } }
+
+@keyframes fill {
+  0% {
+    bottom: -100%; }
+  100% {
+    bottom: 0; } }
+
+@media screen and (max-width: 768px) {
+  @-webkit-keyframes fill {
+    0% {
+      bottom: -100%; }
+    100% {
+      bottom: 0; } }
+  @keyframes fill {
+    0% {
+      bottom: -100%; }
+    100% {
+      bottom: 0; } } }
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translate(-33%);
+    transform: translate(-33%); }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+@keyframes wave {
+  0% {
+    -webkit-transform: translate(-33%);
+    transform: translate(-33%); }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+.warning {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/pics/RB4_2914.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pics/RB4_2914.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pics/RB4_2914.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pics/RB4_2914.jpg");
+  background-size: cover; }
+  .warning .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
