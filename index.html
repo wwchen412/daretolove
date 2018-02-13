@@ -349,7 +349,9 @@
         })
         // fb分享
         $('.shareBtn').on('click', function () {
-           
+            event.preventDefault();
+            var image = $(this).parents().find('.modal-body img').attr('src');
+            console.log(image);
             FB.ui({
                 method: 'share_open_graph',
                 mobile_iframe: true,
