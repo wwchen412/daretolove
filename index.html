@@ -343,6 +343,11 @@
                     }
                 })
             })
+
+            var $location = window.location.href;
+            var $locationArray = $location.split('/');
+            var lastHash = $locationArray[$locationArray.length - 1];
+            console.log(lastHash);
         })
         // fb分享
         document.querySelector('.shareBtn').onclick = function () {
