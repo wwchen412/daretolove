@@ -1,11 +1,11 @@
-*{
+* {
   outline: 0;
 }
 body,
 html {
   font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體",
     "Microsoft JhengHei", sans-serif;
-  
+
   &.active {
     height: 100%;
     overflow: hidden;
@@ -13,7 +13,6 @@ html {
 }
 
 $colormain: #9dd1dc;
-
 
 // header 首頁大圖
 header {
@@ -27,13 +26,13 @@ header {
     letter-spacing: 10px;
     z-index: 1;
     pointer-events: none;
-    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
-    @media screen and (max-width:768px){
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    @media screen and (max-width: 768px) {
       top: 20%;
       right: 50%;
       letter-spacing: 5px;
       transform: translate(50%);
-      h2{
+      h2 {
         font-size: 1.5rem;
       }
     }
@@ -41,13 +40,12 @@ header {
       font-weight: 100;
     }
   }
-  nav{
+  nav {
     z-index: 99;
     position: relative;
-    text-shadow: 1px 1px 5px rgba(0,0,0,.3);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }
- 
-  
+
   .heroImg {
     margin-top: -59px;
     height: 100vh;
@@ -65,33 +63,39 @@ header {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      -o-object-fit: cover;
+      object-position: center top;
+      -o-object-position: center top;
     }
   }
 
-  @keyframes nav{
-    0%{ 
+  @keyframes nav {
+    0% {
       transform: translate(100%);
-      opacity:0}
-   
-    100%{transform: translate(0px);
-    opacity:1}
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate(0px);
+      opacity: 1;
+    }
   }
   nav {
     width: 100%;
     @media screen and (max-width: 768px) {
       &.active {
         background: rgba(black, 0.7);
-        height: 100vh; 
-        transition: .5s;
+        height: 100vh;
+        transition: 0.5s;
         position: absolute;
         left: 0;
-    top: 59px;
+        top: 59px;
         ul.nav {
           display: flex;
           align-items: center;
           justify-content: center;
           height: calc(100vh - 59px);
-          li{
+          li {
             animation: nav 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
           }
         }
@@ -109,25 +113,25 @@ header {
 // 每集影片導引區塊
 
 .slideblock {
-    border: 10px solid #fff;
-    margin-top: -180px;
-    background-color: #fff;
-    box-shadow: 3px 3px 15px 0px rgba(150,150,150,.1);
-    .swiper-button-prev,
-    .cswiper-button-next {
-      width: 50px;
-      transform: translate(-30px, -10%);
-    }
-    .swiper-button-next {
-      transform: translate(30px, -10%);
-    }
+  border: 10px solid #fff;
+  margin-top: -180px;
+  background-color: #fff;
+  box-shadow: 3px 3px 15px 0px rgba(150, 150, 150, 0.1);
+  .swiper-button-prev,
+  .cswiper-button-next {
+    width: 50px;
+    transform: translate(-30px, -10%);
   }
-  @media screen and (max-width: 768px) {
-    padding: 1.5rem 1rem 0;
-    .swiper-wrapper {
-      margin-top: 0;
-    }
+  .swiper-button-next {
+    transform: translate(30px, -10%);
   }
+}
+@media screen and (max-width: 768px) {
+  padding: 1.5rem 1rem 0;
+  .swiper-wrapper {
+    margin-top: 0;
+  }
+}
 
 // 原本有色塊
 .bgmain {
@@ -176,7 +180,6 @@ header {
   }
 }
 
-
 // 劇照
 
 .photography {
@@ -196,11 +199,11 @@ header {
     }
     li {
       float: left;
-      &:nth-child(6n+1),
-      &:nth-child(5){
+      &:nth-child(6n + 1),
+      &:nth-child(5) {
         width: calc(100% / 3 * 2 - 4px);
       }
-      &:nth-child(6n+3),
+      &:nth-child(6n + 3),
       &:nth-child(2n) {
         width: calc(100% / 3 - 4px);
         padding-top: calc(100% / 3 - 6px);
@@ -225,11 +228,10 @@ header {
   }
 
   @media screen and (min-width: 769px) {
-    
     li {
       width: calc(100% / 3 - 10px);
       margin: 0 10px 10px 0;
-      &:nth-child(3n+2){
+      &:nth-child(3n + 2) {
         transform: translateY(3rem);
       }
       height: 450px;
@@ -241,9 +243,9 @@ header {
     }
   }
 }
-.event{
+.event {
   margin: 60px 0;
-  padding:60px 0;
+  padding: 60px 0;
 }
 // winebook
 
@@ -260,17 +262,16 @@ header {
     }
   }
 }
-.modal{
-  background-color: rgba(0,0,0,.8);
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.modal-footer a{
+.modal-footer a {
   display: inline-block;
   vertical-align: top;
-img{
-  width: 30px;
+  img {
+    width: 30px;
+  }
 }
-}
- 
 
 footer {
   img {
@@ -278,22 +279,18 @@ footer {
   }
 }
 
-
-
-
-.fadeIn{
+.fadeIn {
   opacity: 0;
 }
 
 // winebook
-.winebookpage{
+.winebookpage {
   position: relative;
   height: calc(100vh - 60px);
   display: flex;
-  
 }
 
-.wave{
+.wave {
   position: absolute;
   top: 0;
   left: 0;
@@ -303,71 +300,71 @@ footer {
   height: 100%;
   // border: 1px solid #f00;
   z-index: -1;
-  &:before{
-    content: '';
-    display:block;
+  &:before {
+    content: "";
+    display: block;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 50%;
-    background-image: linear-gradient(to bottom,transparent,#fff);
+    background-image: linear-gradient(to bottom, transparent, #fff);
     z-index: 1;
-     @media screen and (max-width:768px){
-       height: 20%;
-      }
+    @media screen and (max-width: 768px) {
+      height: 20%;
+    }
   }
-  .wave-svg-shape{
+  .wave-svg-shape {
     position: absolute;
     width: 100%;
     bottom: -30%;
-    animation:fill 3s  linear forwards;
-    svg{
+    animation: fill 3s linear forwards;
+    svg {
       display: block;
       width: 150%;
       transform: translate(-30%);
-      animation: wave 5s  linear infinite;
-      @media screen and (max-width:768px){
+      animation: wave 5s linear infinite;
+      @media screen and (max-width: 768px) {
         width: 300%;
       }
     }
   }
 }
 
-
-@keyframes fill{
-  0%{
+@keyframes fill {
+  0% {
     bottom: -100%;
   }
-  100%{
+  100% {
     bottom: 0;
   }
 }
-@media screen and (max-width:768px){
-  @keyframes fill{
-  0%{
-    bottom: -100%;
-  }
-  100%{
-    bottom: 0;
+@media screen and (max-width: 768px) {
+  @keyframes fill {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 0;
+    }
   }
 }
-}
-@keyframes wave{
-  0%{
+@keyframes wave {
+  0% {
     transform: translate(-33%);
   }
-  100%{
+  100% {
     transform: translateX(0%);
   }
 }
 
 // 警告頁
-.warning{
+.warning {
   height: 100vh;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../img/pics/RB4_2914.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/pics/RB4_2914.jpg");
   // background-image:url('../img/pics/RB4_2914.jpg');
   background-size: cover;
-  .container{
+  .container {
     display: flex;
     height: 100%;
     flex-wrap: wrap;

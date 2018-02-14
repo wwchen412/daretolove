@@ -132,7 +132,7 @@
         <div class="photography">
             <div class="container">
                 <div class="section-title">
-                    <h3 class="text-center">劇照</h3>
+                    <h3 class="text-center">劇照下載</h3>
                 </div>
 
                 <ul class="d-md-flex list-unstyled flex-wrap dramaPics">
@@ -209,7 +209,7 @@
         <div class="winebook">
             <div class="container">
                 <div class="section-title">
-                    <h3 class="text-center">酒譜</h3>
+                    <h3 class="text-center">心情酒譜</h3>
                 </div>
                 <ul class="row no-gutters list-unstyled py-md-5">
 
@@ -382,6 +382,10 @@
         if (lastHash == '#movie') {
             $("#movieModal").modal('show');
         }
+
+       $("#movieModal").on('hidden.bs.modal', function (e) {
+            $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
+        });
 
 
     </script>
