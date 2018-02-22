@@ -15,6 +15,7 @@
     <title>Dare to love</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css">
+    <link rel="stylesheet" href="content/css/APlayer.min.css">
 
 
 </head>
@@ -127,7 +128,15 @@
 
             </div>
         </div>
-
+        <div class="container my-3">
+<div class="row">
+    <div class="col-md-10  m-auto">
+        <div id="aplayer1" class="aplayer"></div>
+    </div>
+</div>
+        </div>
+        
+      
         <!-- 劇照 -->
         <div class="photography">
             <div class="container">
@@ -301,17 +310,40 @@
 
     <!-- jQuery JS 1.12.4 -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script> -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
-
+    <script src="script/APlayer.min.js"></script>
 
 
     <script type="text/javascript">
+
+        var ap = new APlayer({
+            element: document.getElementById('aplayer1'),
+            music: {
+                title: 'Dare To Love',
+                author: 'Hans Zimmer/Richard Harvey',
+                pic: 'content/img/album.png',
+                url: 'https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3',
+            }
+        });
+
+        
         $(function () {
+          
+            //     // 增加按鈕到player
+            //    var playbtn = `<div class="player-btngroup">
+            //                     <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>Download</a>
+            //                      <a href="#" class="btn btn-info shareBtn">Share</a>
+            //                 <div>`
+
+            //    $('#aplayer1').append(playbtn);
+           
+
+
+
+            // 選單
             $('#menu').click(function () {
                 $('nav').toggleClass('active');
                 $('body').toggleClass('active');
@@ -348,10 +380,10 @@
 
         })
         // fb分享
-        $('.shareBtn').on('click', function () {
+        $('body').on('click', '.shareBtn',function () {
             event.preventDefault();
             var image = $(this).parents().find('.modal-body img').attr('src');
-            console.log(image);
+            // console.log(image);
             FB.ui({
                 method: 'share_open_graph',
                 mobile_iframe: true,
@@ -386,9 +418,10 @@
        $("#movieModal").on('hidden.bs.modal', function (e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
-
-
+        
     </script>
+
+   
 </body>
 
 </html>
