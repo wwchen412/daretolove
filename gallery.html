@@ -28,12 +28,12 @@
         };
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) { return; }
-              js = d.createElement(s); js.id = id;
-               js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-       
+
     </script>
 
     <div id="wrap">
@@ -100,7 +100,7 @@
                     <h3 class="text-center">劇照下載</h3>
                 </div>
 
-                <ul class="d-md-flex list-unstyled flex-wrap dramaPics">
+                <ul class="d-md-flex list-unstyled flex-wrap dramaPics" id="dramapics">
                     <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB1_1676.jpg" alt="">
@@ -160,31 +160,38 @@
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
-                    </li><li class="fadeIn">
+                    </li>
+                    <li class="fadeIn">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
                         </a>
@@ -213,7 +220,7 @@
             </div>
         </div> -->
 
-      
+
         <footer class="text-center">
             <a href="">
                 <img src="content/img/logo.svg" alt="">
@@ -304,22 +311,11 @@
 
             })
 
-            $(window).scroll(function () {
+            // $(window).scroll(function () {
 
 
-                $('.fadeIn').each(function () {
-                    // console.log(this);
-                    var itemHeight = $(this).outerHeight() / 2;
-                    // + $(this).outerHeight()
-                    var bottom_of_fadeIn = $(this).position().top + itemHeight;
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    if (bottom_of_window > bottom_of_fadeIn) {
 
-                        $(this).animate({ 'opacity': '1' }, 1000);
-
-                    }
-                })
-            })
+            // })
 
 
         })
@@ -362,6 +358,75 @@
         $("#movieModal").on('hidden.bs.modal', function (e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
+
+
+        // ajax load imgs
+        $.ajax({
+            url: "http://localhost:3000/imgs"
+        }).done(function (res) {
+            console.log(res);
+            var content = "", counter = 9, wrapper = document.getElementById('dramapics');
+            // for (var i = 0; i < res.length; i++) {
+            //     console.log(res[i].img);
+            // }
+            for (var i = 0; i < counter; i++) {
+
+                content += "<li class='fadeIn'>";
+                content += "<a href='' data-toggle='modal' data-target='#picModal'>";
+                content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
+                content += "</a>";
+                content += "</li>";
+                $('.dramaPics').html(content);
+            }
+            window.addEventListener("scroll", function () {
+                fadeInimg();
+                var contentHeight = wrapper.offsetHeight + wrapper.offsetTop,
+                    currentScrollPosition = window.pageYOffset,
+                    actualScrolledHeight = currentScrollPosition + window.innerHeight;
+                // console.log(contentHeight);
+                // console.log(currentScrollPosition);
+                // console.log(actualScrolledHeight);
+                if (actualScrolledHeight >= contentHeight) {
+                    for (var i = counter; i < (counter + 3); i++) {
+                        if (typeof res[i] == 'undefined') {
+                            break;
+                            content += "Join Now to see more scenes";
+                        }
+                        content += "<li class='fadeIn'>";
+                        content += "<a href='' data-toggle='modal' data-target='#picModal'>";
+                        content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
+                        content += "</a>";
+                        content += "</li>";
+
+
+
+                    }
+                    counter = i;
+                    $('.dramaPics').html(content);
+                }
+            });
+
+        }).fail(function (err) {
+            console.log(err);
+        });
+
+        // fadeing 單張圖片
+        function fadeInimg() {
+            // $('.fadeIn').each(function () {
+            //     // console.log(this);
+            //     var itemHeight = $(this).outerHeight() / 2;
+            //     // + $(this).outerHeight()
+            //     var bottom_of_fadeIn = $(this).position().top + itemHeight;
+            //     var bottom_of_window = $(window).scrollTop() + $(window).height();
+            //     if (bottom_of_window > bottom_of_fadeIn) {
+
+            //         $(this).animate({ 'opacity': '1' }, 1000);
+
+            //     }
+            // })
+        }
+
+
 
     </script>
 
