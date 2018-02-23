@@ -199,14 +199,16 @@ header {
     }
     li {
       float: left;
-      &:nth-child(6n + 1),
-      &:nth-child(5) {
-        width: calc(100% / 3 * 2 - 4px);
-      }
+      
       &:nth-child(6n + 3),
       &:nth-child(2n) {
         width: calc(100% / 3 - 4px);
         padding-top: calc(100% / 3 - 6px);
+      }
+      &:nth-child(6n + 1),
+      &:nth-child(6n-1) {
+        width: calc(100% / 3 * 2 - 4px);
+        padding-top: calc(100% / 3 * 2 - 8.1px);
       }
       &:nth-child(6n) {
         margin-top: calc(-100% / 3 + 3px);
@@ -282,12 +284,49 @@ footer {
 .fadeIn {
   opacity: 0;
 }
-
-// winebook
+@mixin size($w,$h:$w){
+  width: $w;
+  height: $h;
+}
+// winebook頁面
 .winebookpage {
   position: relative;
   height: calc(100vh - 60px);
   display: flex;
+  overflow: hidden;
+  @media screen and (max-width:768px){
+    height: 100%;
+  }
+  .bubble{
+    background-color: rgba(#fff,.4);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+   opacity: 0;
+   transition: 1s;
+  }
+  @keyframes bubble{
+    0%{
+      transform: translate(0,0);
+      opacity: .6;
+    }
+    50%{
+      transform: translate(-100%,-20vh);
+      opacity: .3;
+    }
+    100%{
+      transform: translate(100%,-40vh);
+      opacity: 0;
+    }
+  }
+  @for $i from 1 through 10{
+    .bubble#{$i}{
+     @include size(random(40)+20px);
+     bottom:random(10)+ 5%;
+     right: random(50)+5%;
+      animation:bubble random(5)+5s  random(10)+3s infinite linear forwards;
+    }
+  }
 }
 
 .wave {
@@ -306,11 +345,11 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50%;
+    height: 20%;
     background-image: linear-gradient(to bottom, transparent, #fff);
     z-index: 1;
     @media screen and (max-width: 768px) {
-      height: 20%;
+      height: 10%;
     }
   }
   .wave-svg-shape {
@@ -328,6 +367,7 @@ footer {
       }
     }
   }
+
 }
 
 @keyframes fill {
@@ -335,7 +375,7 @@ footer {
     bottom: -100%;
   }
   100% {
-    bottom: 0;
+    bottom: -10%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -348,6 +388,7 @@ footer {
     }
   }
 }
+
 @keyframes wave {
   0% {
     transform: translate(-33%);

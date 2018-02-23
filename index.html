@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -323,25 +323,25 @@
             element: document.getElementById('aplayer1'),
             music: {
                 title: 'Dare To Love',
-                author: 'Hans Zimmer/Richard Harvey',
+                author: 'SOMEONE',
                 pic: 'content/img/album.png',
-                url: 'https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3',
+                url: 'content/A_Virtual_Friend-Crazy_Like_A_Fox.mp3',
             }
         });
 
         
         $(function () {
           
-            //     // 增加按鈕到player
-            //    var playbtn = `<div class="player-btngroup">
-            //                     <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>Download</a>
-            //                      <a href="#" class="btn btn-info shareBtn">Share</a>
-            //                 <div>`
-
-            //    $('#aplayer1').append(playbtn);
-           
-
-
+                // 增加按鈕到player
+               var playbtn = `<div class="player-btngroup">
+                                <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
+                                    <small>Download</small>
+                                    </a>
+                                 <a href="#" class="btn btn-info shareBtn">
+                                    <small>Share<small> 
+                                </a>
+                            <div>`
+               $('#aplayer1').append(playbtn);
 
             // 選單
             $('#menu').click(function () {
