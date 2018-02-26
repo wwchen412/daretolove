@@ -93,19 +93,19 @@
                 </div>
                 <div class="wineSelect">
                     <div class="wine">
-                        <a href="">
+                        <a href="winebook.html">
                             <img src="content/img/winepic.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </div>
                     <div class="wine">
-                        <a href="">
+                        <a href="winebook.html">
                             <img src="content/img/winepic_1.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
                     </div>
                     <div class="wine">
-                        <a href="">
+                        <a href="winebook.html">
                             <img src="content/img/winepic_2.png" alt="" class="img-fluid">
                             <p>Gin/Vodka Martini</p>
                         </a>
@@ -134,105 +134,17 @@
 
     <script type="text/javascript">
 
-        var ap = new APlayer({
-            element: document.getElementById('aplayer1'),
-            music: {
-                title: 'Dare To Love',
-                author: 'SOMEONE',
-                pic: 'content/img/album.png',
-                url: 'content/A_Virtual_Friend-Crazy_Like_A_Fox.mp3',
-            }
-        });
-
-
         $(function () {
-
-            // 增加按鈕到player
-            var playbtn = `<div class="player-btngroup">
-                                <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
-                                    <small>Download</small>
-                                    </a>
-                                 <a href="#" class="btn btn-info shareBtn">
-                                    <small>Share<small> 
-                                </a>
-                            <div>`
-            $('#aplayer1').append(playbtn);
 
             // 選單
             $('#menu').click(function () {
                 $('nav').toggleClass('active');
                 $('body').toggleClass('active');
             });
-            // 點劇照換照片
-            $('.dramaPics li a').each(function () {
-                $(this).click(function () {
-                    event.preventDefault();
-                    var imgSrc = $(this).find('img').attr('src');
-
-                    $('#picModal .modal-body img').attr('src', imgSrc);
-                    $('#picModal .downloadImg').attr('href', imgSrc);
-                })
-
-            })
-
-            $(window).scroll(function () {
-
-
-                $('.fadeIn').each(function () {
-                    // console.log(this);
-                    var itemHeight = $(this).outerHeight() / 2;
-                    // + $(this).outerHeight()
-                    var bottom_of_fadeIn = $(this).position().top + itemHeight;
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    if (bottom_of_window > bottom_of_fadeIn) {
-
-                        $(this).animate({ 'opacity': '1' }, 1000);
-
-                    }
-                })
-            })
-
+            
 
         })
-        // fb分享
-        $('body').on('click', '.shareBtn', function () {
-            event.preventDefault();
-            var image = $(this).parents().find('.modal-body img').attr('src');
-            // console.log(image);
-            FB.ui({
-                method: 'share_open_graph',
-                mobile_iframe: true,
-                action_type: 'og.shares',
-                action_properties: JSON.stringify({
-                    object: {
-                        'og:url': 'http://daretolove.wwmt.com.tw/#movie', // your url to share
-                        'og:title': 'Dare to love',
-                        'og:description': '我的心情我的酒',
-                        'og:image:url': image,
-                        'og:image:width': '1920',
-                        'og:image:height': '1200',
-                    }
-                }),
-                href: 'http://daretolove.wwmt.com.tw/#movie',
-
-            }, function (response) {
-                alert('分享完成！')
-            });
-        })
-
-
-        // movie光箱展開
-        var $location = window.location.href;
-        var $locationArray = $location.split('/');
-        var lastHash = $locationArray[$locationArray.length - 1];
-        console.log(lastHash);
-        if (lastHash == '#movie') {
-            $("#movieModal").modal('show');
-        }
-
-        $("#movieModal").on('hidden.bs.modal', function (e) {
-            $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
-        });
+      
 
     </script>
 
