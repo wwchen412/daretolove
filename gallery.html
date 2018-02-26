@@ -300,136 +300,120 @@
                 $('body').toggleClass('active');
             });
             // 點劇照換照片
-            $('.dramaPics li a').each(function () {
-                $(this).click(function () {
-                    event.preventDefault();
-                    var imgSrc = $(this).find('img').attr('src');
+            renewImg();
 
-                    $('#picModal .modal-body img').attr('src', imgSrc);
-                    $('#picModal .downloadImg').attr('href', imgSrc);
+            function renewImg() {
+                console.log('renew');
+                $('.dramaPics li a').each(function () {
+                    $(this).click(function () {
+                        event.preventDefault();
+                        var imgSrc = $(this).find('img').attr('src');
+
+                        $('#picModal .modal-body img').attr('src', imgSrc);
+                        $('#picModal .downloadImg').attr('href', imgSrc);
+                    })
+
                 })
-
-            })
-
-            // $(window).scroll(function () {
-
-
-
-            // })
-
-
-        })
-        // fb分享
-        $('body').on('click', '.shareBtn', function () {
-            event.preventDefault();
-            var image = $(this).parents().find('.modal-body img').attr('src');
-            // console.log(image);
-            FB.ui({
-                method: 'share_open_graph',
-                mobile_iframe: true,
-                action_type: 'og.shares',
-                action_properties: JSON.stringify({
-                    object: {
-                        'og:url': 'http://daretolove.wwmt.com.tw/#movie', // your url to share
-                        'og:title': 'Dare to love',
-                        'og:description': '我的心情我的酒',
-                        'og:image:url': image,
-                        'og:image:width': '1920',
-                        'og:image:height': '1200',
-                    }
-                }),
-                href: 'http://daretolove.wwmt.com.tw/#movie',
-
-            }, function (response) {
-                alert('分享完成！')
-            });
-        })
-
-
-        // movie光箱展開
-        var $location = window.location.href;
-        var $locationArray = $location.split('/');
-        var lastHash = $locationArray[$locationArray.length - 1];
-        console.log(lastHash);
-        if (lastHash == '#movie') {
-            $("#movieModal").modal('show');
-        }
-
-        $("#movieModal").on('hidden.bs.modal', function (e) {
-            $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
-        });
-
-
-        // ajax load imgs
-        // 取得劇照資料
-        $.ajax({
-            url: "http://localhost:3000/imgs"
-        }).done(function (res) {
-
-            // 新增內容  數量 偵測用的容器高
-            var content = "", counter = 9, wrapper = document.getElementById('dramapics');
-            
-            // 先讀出前面9個並新增到ul中
-            for (var i = 0; i < counter; i++) {
-
-                content += "<li class='fadeIn'>";
-                content += "<a href='' data-toggle='modal' data-target='#picModal'>";
-                content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
-                content += "</a>";
-                content += "</li>";
-                $('.dramaPics').html(content);
             }
 
 
-            // 當滾輪滑動時執行事件
-            window.addEventListener("scroll", function () {
-               
-                var contentHeight = wrapper.offsetHeight + wrapper.offsetTop,
-                    currentScrollPosition = window.pageYOffset,
-                    actualScrolledHeight = currentScrollPosition + window.innerHeight,appendContent="";
 
-                // 如果物件底部高於捲軸執行事件
-                if (actualScrolledHeight >= contentHeight && counter<res.length) {
-                    // 擷取現在已經渲染的數樣 到新的數量
-                    
-                     var resSlice = res.slice(counter,counter+3);
-                    
-                    for (var i = 0; i < 3; i++) {
+            // fb分享
+            $('body').on('click', '.shareBtn', function () {
+                event.preventDefault();
+                var image = $(this).parents().find('.modal-body img').attr('src');
+                // console.log(image);
+                FB.ui({
+                    method: 'share_open_graph',
+                    mobile_iframe: true,
+                    action_type: 'og.shares',
+                    action_properties: JSON.stringify({
+                        object: {
+                            'og:url': 'http://daretolove.wwmt.com.tw/#movie', // your url to share
+                            'og:title': 'Dare to love',
+                            'og:description': '我的心情我的酒',
+                            'og:image:url': image,
+                            'og:image:width': '1920',
+                            'og:image:height': '1200',
+                        }
+                    }),
+                    href: 'http://daretolove.wwmt.com.tw/#movie',
+
+                }, function (response) {
+                    alert('分享完成！')
+                });
+            })
+
+
+            // movie光箱展開
+            var $location = window.location.href;
+            var $locationArray = $location.split('/');
+            var lastHash = $locationArray[$locationArray.length - 1];
+            console.log(lastHash);
+            if (lastHash == '#movie') {
+                $("#movieModal").modal('show');
+            }
+
+            $("#movieModal").on('hidden.bs.modal', function (e) {
+                $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
+            });
+
+
+            // ajax load imgs
+            // 取得劇照資料
+            $.ajax({
+                url: "https://wwchen412.github.io//imgs"
+            }).done(function (res) {
+
+                // 新增內容  數量 偵測用的容器高
+                var content = "", counter = 9, wrapper = document.getElementById('dramapics');
+
+                // 先讀出前面9個並新增到ul中
+                for (var i = 0; i < counter; i++) {
+
+                    content += "<li class='fadeIn'>";
+                    content += "<a href='' data-toggle='modal' data-target='#picModal'>";
+                    content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
+                    content += "</a>";
+                    content += "</li>";
+                    $('.dramaPics').html(content);
+                }
+
+
+                // 當滾輪滑動時執行事件
+                window.addEventListener("scroll", function () {
+
+                    var contentHeight = wrapper.offsetHeight + wrapper.offsetTop,
+                        currentScrollPosition = window.pageYOffset,
+                        actualScrolledHeight = currentScrollPosition + window.innerHeight, appendContent = "";
+
+                    // 如果物件底部高於捲軸執行事件
+                    if (actualScrolledHeight >= contentHeight && counter < res.length) {
+                        // 擷取現在已經渲染的數樣 到新的數量
+
+                        var resSlice = res.slice(counter, counter + 3);
+
+                        for (var i = 0; i < 3; i++) {
 
                             appendContent += "<li class='fadeIn'>";
                             appendContent += "<a href='' data-toggle='modal' data-target='#picModal'>";
                             appendContent += "<img class='img - fluid' src='" + resSlice[i].img + "' alt=''>";
                             appendContent += "</a>";
                             appendContent += "</li>";
-                        
+
+                        }
+                        counter = counter + i;
+
+                        $('.dramaPics').append(appendContent);
                     }
-                    counter = counter+i;
-                    
-                    $('.dramaPics').append(appendContent);
-                }
+                    renewImg();
+                });
+
+            }).fail(function (err) {
+                console.log(err);
             });
 
-        }).fail(function (err) {
-            console.log(err);
-        });
-
-        // fadeing 單張圖片
-        function fadeInimg() {
-            // $('.fadeIn').each(function () {
-            //     // console.log(this);
-            //     var itemHeight = $(this).outerHeight() / 2;
-            //     // + $(this).outerHeight()
-            //     var bottom_of_fadeIn = $(this).position().top + itemHeight;
-            //     var bottom_of_window = $(window).scrollTop() + $(window).height();
-            //     if (bottom_of_window > bottom_of_fadeIn) {
-
-            //         $(this).animate({ 'opacity': '1' }, 1000);
-
-            //     }
-            // })
-        }
-
-
+        })
 
     </script>
 
