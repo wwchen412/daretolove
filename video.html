@@ -22,28 +22,17 @@
 
 <body>
     <script>
-        window.fbAsyncInit = function () { 
-            FB.init({ appId: '288053411702507',
-         xfbml: true, cookie: false,
-          version: 'v2.5' }); };
-           (function (d, s, id) { 
-               var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
-        // window.fbAsyncInit = function () {
-        //     FB.init({
-        //         appId: '288053411702507',
-        //         autoLogAppEvents: true,
-        //         xfbml: true,
-        //         version: 'v2.12'
-        //     });
-        // };
-
-        // (function (d, s, id) {
-        //     var js, fjs = d.getElementsByTagName(s)[0];
-        //     if (d.getElementById(id)) { return; }
-        //     js = d.createElement(s); js.id = id;
-        //     js.src = "http://connect.facebook.net/en_US/sdk.js";
-        //     fjs.parentNode.insertBefore(js, fjs);
-        // }(document, 'script', 'facebook-jssdk'));
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true, cookie: false,
+                version: 'v2.5'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      
     </script>
 
     <div id="wrap">
@@ -90,166 +79,93 @@
                             <h2 class="mt-5"> 我的心情，我的酒</h2>
                         </div>
                     </div>
-                    <div class="title text-light position-absolute">
-                        <h2>勇敢。愛 </h2>
-                        <h2 class="mt-5"> 我的心情，我的酒</h2>
-                    </div>
+                  
                     <div class="heroImg">
-                        <img src="content/img/bg.png" alt="" class="img-fluid d-none d-md-block">
-                        <img src="content/img/bg.png" alt="" class="img-fluid d-block d-md-none">
+                        <img src="content/img/pics/RB2_3769.jpg" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/videomobile.png" alt="" class="img-fluid d-block d-md-none">
                     </div>
                 </header>
             </div>
 
         </div>
 
-        <!-- 輪播影片 -->
+        <!-- 當期影片 -->
         <div class="sliderblock bgmain">
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
 
-                        <div class="row no-gutters slideblock">
-                            <div class="col-8">
-                                <a href="" data-toggle="modal" data-target="#movieModal">
-                                    <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
-                                </a>
+                        <div class="row no-gutters slideblock  videoblock">
+                            <div class="col-12">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <img src="content/img/videofont.svg" alt="" class="img-fluid">
-                            </div>
+                            
+                        </div>
+                        <div class="col-md-12 my-3">
+                            <h5>第一杯酒</h5>
+                            <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
                         </div>
 
-
-
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="container my-3">
-<div class="row">
-    <div class="col-md-10  m-auto">
-        <div id="aplayer1" class="aplayer"></div>
-    </div>
-</div>
-        </div>
-        
-      
-        <!-- 劇照 -->
-        <div class="photography">
+
+        <!-- 播放列表 -->
+        <div class="videos py-md-5">
             <div class="container">
                 <div class="section-title">
-                    <h3 class="text-center">劇照下載</h3>
+                    <h3 class="text-center">播放列表</h3>
                 </div>
-
-                <ul class="d-md-flex list-unstyled flex-wrap dramaPics">
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB1_1676.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_2881.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB2_3720.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB1_1558.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/phfont.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB2_3919.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB1_1784.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3606.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="fadeIn">
-                        <a href="" data-toggle="modal" data-target="#picModal">
-                            <img class="img-fluid" src="http://daretolove.wwmt.com.tw/content/img/pics/RB4_3646.jpg" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 活動 -->
-        <!-- <div class="event bgmain">
-            <div class="container">
-                <div class="section-title">
-                    <h3 class="text-center">Event</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1 mt-md-5">
-                        <img src="content/img/event.png" alt="" class="img-fluid">
-                        <p class="py-3">分享你的愛情故事照片，選擇你當下的心情與劇中出現的金門高粱酒調酒並且對照片寫下當時的心得，並分享至你的臉書塗鴉牆。</p>
-                    </div>
-                    <div class="col-12 text-center my-3">
-                        <button type="button" name="" id="" class="btn btn-danger m-auto px-5 rounded-0">
-                            前往活動
-                        </button>
+                <div class="playlist mt-md-5 d-none d-md-block">
+                    <div class="row no-gutters">
+                        <div class="col-6 px-2">
+                            <div class="embed-responsive embed-responsive-16by9 videoBorder mb-3">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                  
+                            </div>
+                            <h5 class="mb-4">第一杯酒</h5>
+                        </div>
+                        <div class="col-6 px-2">
+                            <div class="embed-responsive embed-responsive-16by9 videoBorder mb-3">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <h5 class="mb-4">第二杯酒</h5>
+                        </div>
+                        <div class="col-6 px-2">
+                            <div class="embed-responsive embed-responsive-16by9 videoBorder mb-3">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <h5 class="mb-4">第三杯酒</h5>
+                        </div>
+                        <div class="col-6 px-2">
+                            <div class="embed-responsive embed-responsive-16by9 videoBorder mb-3">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <h5 class="mb-4">第四杯酒</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div> -->
-
-        <!-- winebook -->
-        <div class="winebook">
-            <div class="container">
-                <div class="section-title">
-                    <h3 class="text-center">心情酒譜</h3>
+                <div class="playlistbtn d-flex d-md-none">
+                    <a class="btn text-light">01</a>
+                    <a class="btn text-light">02</a>
+                    <a class="btn text-light">03</a>
+                    <a class="btn text-light">04</a>
+                    <a class="btn text-light">05</a>
                 </div>
-                <ul class="row no-gutters list-unstyled py-md-5">
-
-                    <li class="col-6 px-1 fadeIn offset-3 text-center">
-                        <a href="winebook.html" class="text-dark">
-                            <img src="content/img/wine.png" alt="" class="img-fluid">
-                            <p style="background:#000;color:#fff;transform:translate(0,-50%)" class="d-inline-block p-2 m-auto">Gin/Vodka Martini</p>
-                        </a>
-                    </li>
-                    <!-- <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_1.png" alt="" class="img-fluid">
-                            <p>Gin/Vodka Martini</p>
-                        </a>
-                    </li>
-                    <li class="col-md-3 col-8 px-1 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_2.png" alt="" class="img-fluid">
-                            <p>Gin or Vodka and Tonic</p>
-                        </a>
-                    </li>
-                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_3.png" alt="" class="img-fluid">
-                            <p>Gin or Vodka and Tonic</p>
-                        </a>
-                    </li> -->
-                </ul>
             </div>
-
         </div>
+
+       
         <footer class="text-center">
             <a href="">
                 <img src="content/img/logo.svg" alt="">
@@ -292,7 +208,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                            <iframe width="560" height="315" src="http://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;showinfo=0" frameborder="0"
                                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -329,11 +245,11 @@
             }
         });
 
-        
+
         $(function () {
-          
-                // 增加按鈕到player
-               var playbtn = `<div class="player-btngroup">
+
+            // 增加按鈕到player
+            var playbtn = `<div class="player-btngroup">
                                 <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
                                     <small>Download</small>
                                     </a>
@@ -341,7 +257,7 @@
                                     <small>Share<small> 
                                 </a>
                             <div>`
-               $('#aplayer1').append(playbtn);
+            $('#aplayer1').append(playbtn);
 
             // 選單
             $('#menu').click(function () {
@@ -380,7 +296,7 @@
 
         })
         // fb分享
-        $('body').on('click', '.shareBtn',function () {
+        $('body').on('click', '.shareBtn', function () {
             event.preventDefault();
             var image = $(this).parents().find('.modal-body img').attr('src');
             // console.log(image);
@@ -415,13 +331,13 @@
             $("#movieModal").modal('show');
         }
 
-       $("#movieModal").on('hidden.bs.modal', function (e) {
+        $("#movieModal").on('hidden.bs.modal', function (e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
-        
+
     </script>
 
-   
+
 </body>
 
 </html>

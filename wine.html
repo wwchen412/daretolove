@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fb OG -->
+    <meta property="og:url" content="http://daretolove.wwmt.com.tw/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dare to Love" />
+    <meta property="og:description" content="金門酒廠 我的心情我的酒" />
+    <meta property="og:image" content="http://daretolove.wwmt.com.tw/content/img/bg.png" />
+
+    <title>Dare to love</title>
+    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="content/css/wine.css">
+    <link rel="stylesheet" href="content/css/APlayer.min.css">
+
+
+</head>
+
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true, cookie: false,
+                version: 'v2.5'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div id="wrap">
+        <!-- header -->
+        <div class="row no-gutters">
+            <div class="col-12">
+                <header class="position-relative">
+                    <div class="container">
+                        <nav class="p-md-2">
+
+                            <div class="d-md-flex" style="width:100%">
+                                <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                    <a href="#" class="d-inline-block p-2 text-light">
+                                        <img src="content/img/title.svg" alt="" width="150px">
+                                    </a>
+                                    <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                        <img src="content/img/menu.svg" alt="" width="30px">
+                                    </a>
+                                </div>
+                                <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="d-block p-2 text-light active">首頁</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="d-block p-2 text-light">線上單元劇</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="d-block p-2 text-light"> 劇照下載</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a href="#" class="d-block p-2 text-light">Dare to love</a>
+                                    </li> -->
+                                    <li class="nav-item">
+                                        <a href="winebook.html" class="d-block p-2 text-light">心情酒譜</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="d-block p-2 text-light">主題曲</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="title text-light position-absolute" style="transform:translate(0);    writing-mode: vertical-lr;">
+                            <h2>勇敢。愛 </h2>
+                            <h2 class="mt-5"> 創意酒譜</h2>
+                        </div>
+                    </div>
+
+                    <div class="heroImg">
+                        <img src="content/img/winebg.png" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/winebg.png" alt="" class="img-fluid d-block d-md-none">
+                    </div>
+                </header>
+            </div>
+
+        </div>
+
+        <!-- wine-->
+        <div class="wineArea">
+            <div class="container" style="max-width:700px">
+                <div class="section-title">
+                    <h3 class="text-center">心情酒譜</h3>
+                </div>
+                <div class="wineSelect">
+                    <div class="wine">
+                        <a href="">
+                            <img src="content/img/winepic.png" alt="" class="img-fluid">
+                            <p>Gin/Vodka Martini</p>
+                        </a>
+                    </div>
+                    <div class="wine">
+                        <a href="">
+                            <img src="content/img/winepic_1.png" alt="" class="img-fluid">
+                            <p>Gin/Vodka Martini</p>
+                        </a>
+                    </div>
+                    <div class="wine">
+                        <a href="">
+                            <img src="content/img/winepic_2.png" alt="" class="img-fluid">
+                            <p>Gin/Vodka Martini</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="text-center">
+            <a href="">
+                <img src="content/img/logo.svg" alt="">
+                <p class="text-secondary py-sm-3">Copyright © 2017 . All Rights Reserved.</p>
+            </a>
+        </footer>
+
+    </div>
+
+    <!-- jQuery JS 1.12.4 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/APlayer.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var ap = new APlayer({
+            element: document.getElementById('aplayer1'),
+            music: {
+                title: 'Dare To Love',
+                author: 'SOMEONE',
+                pic: 'content/img/album.png',
+                url: 'content/A_Virtual_Friend-Crazy_Like_A_Fox.mp3',
+            }
+        });
+
+
+        $(function () {
+
+            // 增加按鈕到player
+            var playbtn = `<div class="player-btngroup">
+                                <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
+                                    <small>Download</small>
+                                    </a>
+                                 <a href="#" class="btn btn-info shareBtn">
+                                    <small>Share<small> 
+                                </a>
+                            <div>`
+            $('#aplayer1').append(playbtn);
+
+            // 選單
+            $('#menu').click(function () {
+                $('nav').toggleClass('active');
+                $('body').toggleClass('active');
+            });
+            // 點劇照換照片
+            $('.dramaPics li a').each(function () {
+                $(this).click(function () {
+                    event.preventDefault();
+                    var imgSrc = $(this).find('img').attr('src');
+
+                    $('#picModal .modal-body img').attr('src', imgSrc);
+                    $('#picModal .downloadImg').attr('href', imgSrc);
+                })
+
+            })
+
+            $(window).scroll(function () {
+
+
+                $('.fadeIn').each(function () {
+                    // console.log(this);
+                    var itemHeight = $(this).outerHeight() / 2;
+                    // + $(this).outerHeight()
+                    var bottom_of_fadeIn = $(this).position().top + itemHeight;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if (bottom_of_window > bottom_of_fadeIn) {
+
+                        $(this).animate({ 'opacity': '1' }, 1000);
+
+                    }
+                })
+            })
+
+
+        })
+        // fb分享
+        $('body').on('click', '.shareBtn', function () {
+            event.preventDefault();
+            var image = $(this).parents().find('.modal-body img').attr('src');
+            // console.log(image);
+            FB.ui({
+                method: 'share_open_graph',
+                mobile_iframe: true,
+                action_type: 'og.shares',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': 'http://daretolove.wwmt.com.tw/#movie', // your url to share
+                        'og:title': 'Dare to love',
+                        'og:description': '我的心情我的酒',
+                        'og:image:url': image,
+                        'og:image:width': '1920',
+                        'og:image:height': '1200',
+                    }
+                }),
+                href: 'http://daretolove.wwmt.com.tw/#movie',
+
+            }, function (response) {
+                alert('分享完成！')
+            });
+        })
+
+
+        // movie光箱展開
+        var $location = window.location.href;
+        var $locationArray = $location.split('/');
+        var lastHash = $locationArray[$locationArray.length - 1];
+        console.log(lastHash);
+        if (lastHash == '#movie') {
+            $("#movieModal").modal('show');
+        }
+
+        $("#movieModal").on('hidden.bs.modal', function (e) {
+            $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
+        });
+
+    </script>
+
+
+</body>
+
+</html>

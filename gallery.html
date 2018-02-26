@@ -67,7 +67,7 @@
                                         <a href="#" class="d-block p-2 text-light">Dare to love</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a href="wine.html" class="d-block p-2 text-light">心情酒譜</a>
+                                        <a href="winebook.html" class="d-block p-2 text-light">心情酒譜</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="d-block p-2 text-light">主題曲</a>
@@ -383,22 +383,23 @@
                 var contentHeight = wrapper.offsetHeight + wrapper.offsetTop,
                     currentScrollPosition = window.pageYOffset,
                     actualScrolledHeight = currentScrollPosition + window.innerHeight;
-                // console.log(contentHeight);
-                // console.log(currentScrollPosition);
-                // console.log(actualScrolledHeight);
+               
                 if (actualScrolledHeight >= contentHeight) {
-                    for (var i = counter; i < (counter + 3); i++) {
+                    //  var resNum = parseInt(counter);
+                    //  var resSlice = res.slice(resNum,resNum+3);
+                    //  console.log(counter);
+                    // console.log(resSlice);
+                    for (var i = 0; i < res.length; i++) {
                         if (typeof res[i] == 'undefined') {
                             break;
                             content += "Join Now to see more scenes";
                         }
+                       
                         content += "<li class='fadeIn'>";
                         content += "<a href='' data-toggle='modal' data-target='#picModal'>";
                         content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
                         content += "</a>";
                         content += "</li>";
-
-
 
                     }
                     counter = i;

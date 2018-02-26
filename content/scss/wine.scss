@@ -125,6 +125,11 @@ header {
   .swiper-button-next {
     transform: translate(30px, -10%);
   }
+  &.videoblock{
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   padding: 1.5rem 1rem 0;
@@ -432,5 +437,77 @@ footer {
     position: absolute;
     bottom: 10px;
     right: 10px;
+  }
+}
+.playlistbtn{
+  justify-content: space-around;
+  &>a{
+    // padding: 1rem;
+    margin:0 5px 40px;
+    background-color: #67A6E0;
+    width: calc(100% / 5);
+    color:#fff;
+    cursor: pointer;
+    &:hover{
+      background-color: #426DBB;
+    }
+  }
+}
+
+
+// 選擇酒譜
+.wineSelect{
+  margin-top: 60px;
+  .wine{
+    margin-bottom: 30px;
+    & a >*{
+      display: inline-block;
+      vertical-align: top;
+    }
+    a{
+      text-decoration: none;
+      position: relative;
+      display:block;
+    }
+   img{
+     width: 55%;
+   }
+   p{
+     position: absolute;
+     color:#fff;
+     padding: 1rem 1.5rem;
+     background-color: #000;
+     left: 55%; 
+     margin-top: 60px;
+      transform: translateX(-50%);
+   }
+   &:nth-child(2n){
+    
+     direction: rtl;
+     text-align: right;
+     p{
+       left: auto;
+       right: 55%;
+       transform: translateX(50%);
+     }
+   }
+   @media screen and(max-width:768px) {
+     img{
+       width: 80%;
+     }
+     p{
+       left: auto;
+       right: 0;
+           transform: translate(0);
+     }
+     &:nth-child(2n){
+  
+     p{
+       left: 0;
+       right: auto;
+       transform: translateX(0);
+     }
+   }
+   }
   }
 }
