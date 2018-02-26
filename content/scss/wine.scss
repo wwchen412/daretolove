@@ -287,7 +287,9 @@ footer {
     max-width: 50px;
   }
 }
-
+.fadeIndex{
+  opacity: 0;
+}
 .fadeIn {
   animation:fadeIn 1s .5s linear backwards;
 }
