@@ -361,14 +361,15 @@
 
 
         // ajax load imgs
+        // 取得劇照資料
         $.ajax({
             url: "http://localhost:3000/imgs"
         }).done(function (res) {
-            console.log(res);
+
+            // 新增內容  數量 偵測用的容器高
             var content = "", counter = 9, wrapper = document.getElementById('dramapics');
-            // for (var i = 0; i < res.length; i++) {
-            //     console.log(res[i].img);
-            // }
+            
+            // 先讀出前面9個並新增到ul中
             for (var i = 0; i < counter; i++) {
 
                 content += "<li class='fadeIn'>";
@@ -378,32 +379,33 @@
                 content += "</li>";
                 $('.dramaPics').html(content);
             }
+
+
+            // 當滾輪滑動時執行事件
             window.addEventListener("scroll", function () {
-                fadeInimg();
+               
                 var contentHeight = wrapper.offsetHeight + wrapper.offsetTop,
                     currentScrollPosition = window.pageYOffset,
-                    actualScrolledHeight = currentScrollPosition + window.innerHeight;
-               
-                if (actualScrolledHeight >= contentHeight) {
-                    //  var resNum = parseInt(counter);
-                    //  var resSlice = res.slice(resNum,resNum+3);
-                    //  console.log(counter);
-                    // console.log(resSlice);
-                    for (var i = 0; i < res.length; i++) {
-                        if (typeof res[i] == 'undefined') {
-                            break;
-                            content += "Join Now to see more scenes";
-                        }
-                       
-                        content += "<li class='fadeIn'>";
-                        content += "<a href='' data-toggle='modal' data-target='#picModal'>";
-                        content += "<img class='img - fluid' src='" + res[i].img + "' alt=''>";
-                        content += "</a>";
-                        content += "</li>";
+                    actualScrolledHeight = currentScrollPosition + window.innerHeight,appendContent="";
 
+                // 如果物件底部高於捲軸執行事件
+                if (actualScrolledHeight >= contentHeight && counter<res.length) {
+                    // 擷取現在已經渲染的數樣 到新的數量
+                    
+                     var resSlice = res.slice(counter,counter+3);
+                    
+                    for (var i = 0; i < 3; i++) {
+
+                            appendContent += "<li class='fadeIn'>";
+                            appendContent += "<a href='' data-toggle='modal' data-target='#picModal'>";
+                            appendContent += "<img class='img - fluid' src='" + resSlice[i].img + "' alt=''>";
+                            appendContent += "</a>";
+                            appendContent += "</li>";
+                        
                     }
-                    counter = i;
-                    $('.dramaPics').html(content);
+                    counter = counter+i;
+                    
+                    $('.dramaPics').append(appendContent);
                 }
             });
 
