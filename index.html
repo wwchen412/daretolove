@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
-
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
 
 </head>
 
@@ -56,7 +56,7 @@
 
                             <div class="d-md-flex" style="width:100%">
                                 <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
-                                    <a href="#" class="d-inline-block p-2 text-light">
+                                    <a href="index.html" class="d-inline-block p-2 text-light">
                                         <img src="content/img/title.svg" alt="" width="150px">
                                     </a>
                                     <a class="d-inline-block d-md-none p-2 text-light" id="menu">
@@ -81,15 +81,17 @@
                                 </ul>
                             </div>
                         </nav>
+<!--
                         <div class="title text-light position-absolute">
                             <h2>勇敢。愛 </h2>
                             <h2 class="mt-5"> 我的心情，我的酒</h2>
                         </div>
+-->
                     </div>
                     
                     <div class="heroImg">
                         <img src="content/img/bg.png" alt="" class="img-fluid d-none d-md-block">
-                        <img src="content/img/bg.png" alt="" class="img-fluid d-block d-md-none">
+                        <img src="content/img/bg_m.png" alt="" class="img-fluid d-block d-md-none">
                     </div>
                 </header>
             </div>
@@ -104,14 +106,16 @@
                     <div class="col-md-10 offset-md-1">
 
                         <div class="row no-gutters slideblock">
-                            <div class="col-8">
+                            <div class="col-12">
                                 <a href="" data-toggle="modal" data-target="#movieModal">
                                     <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
                                 </a>
                             </div>
+<!--
                             <div class="col-4">
                                 <img src="content/img/videofont.svg" alt="" class="img-fluid">
                             </div>
+-->
                         </div>
 
 
@@ -122,8 +126,12 @@
             </div>
         </div>
         <div class="container my-3">
+        
 <div class="row">
-    <div class="col-md-10  m-auto">
+   <div class="section-title">
+                    <h3 class="text-center">主題曲</h3>
+                </div>
+    <div class="col-md-10  m-auto" style="padding-top: 30px">
         <div id="aplayer1" class="aplayer"></div>
     </div>
 </div>
@@ -218,7 +226,7 @@
                     <li class="col-6 px-1 fadeIn offset-3 text-center">
                         <a href="wine.html" class="text-dark">
                             <img src="content/img/wine.png" alt="" class="img-fluid">
-                            <p style="background:#000;color:#fff;transform:translate(0,-50%)" class="d-inline-block p-2 m-auto">Gin/Vodka Martini</p>
+                            <p style="background:#000;color:#fff;transform:translate(0,-50%)" class="d-inline-block p-2 m-auto">暖心系酒譜</p>
                         </a>
                     </li>
                     <!-- <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
@@ -245,9 +253,9 @@
         </div>
         <footer class="text-center">
             <a href="">
-                <img src="content/img/logo.svg" alt="">
-                <p class="text-secondary py-sm-3">Copyright © 2017 . All Rights Reserved.</p>
-            </a>
+                <img src="content/img/logo.svg?2" alt=""></a>
+                <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
+            
         </footer>
         <!-- Modal -->
         <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalTitle" aria-hidden="true">
