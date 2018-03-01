@@ -304,7 +304,10 @@
     <script src="script/APlayer.min.js"></script>
    
     <script type="text/javascript">
+
                 let navbar = document.querySelector('.nav-bar');
+                let windowW = window.outerWidth;
+               
                 window.addEventListener('scroll', function () {
                     let headerH = document.querySelector('.nav-bar').clientHeight;
                     let windowScrollOffset = window.pageYOffset;
