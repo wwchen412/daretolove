@@ -61,20 +61,28 @@ header {
        }
     }
   }
-  .navbar{
+  .nav-bar{
     &.down{
       position: fixed;
       background-color: rgba(#fff,.6);
       z-index: 99;
       top: 0;
       width: 100%;
+      animation: navbar .5s cubic-bezier(0.215, 0.610, 0.355, 1);
       a{
         color:#666;
       }
 
     }
   }
-
+  @keyframes navbar{
+    0%{
+      transform: translateY(-100%);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
   .heroImg {
     margin-top: -59px;
     height: 100vh;
