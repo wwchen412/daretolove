@@ -21,7 +21,7 @@ header {
     right: 20%;
     max-width: 1140px;
     margin: auto;
-    top: 20vh;
+    top: 10vh;
     letter-spacing: 10px;
     z-index: 1;
     pointer-events: none;
@@ -30,7 +30,7 @@ header {
       max-width: 100px;
     }
     @media screen and (max-width: 768px) {
-      top: 12vh;
+      top:0;
       right: 50%;
       letter-spacing: 5px;
       transform: translate(50%);
@@ -52,7 +52,14 @@ header {
     z-index: 99;
     position: relative;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-    
+    li{
+      margin: 0 10px;
+    }
+    .nav-item{
+       @media screen and (max-width: 768px) {
+         width: 100%;
+       }
+    }
   }
   .navbar{
     &.down{
@@ -305,6 +312,7 @@ header {
 }
 
 footer {
+  margin-bottom: 10vh;
   img {
     max-width: 50px;
   }
@@ -539,5 +547,24 @@ footer {
 .videos{
   img{
     cursor: pointer;
+  }
+}
+
+.signgal{
+  
+  background-color: #000;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+  img{
+    display: block;
+    width: 650px;
+    margin: 0 auto;
+    
   }
 }
