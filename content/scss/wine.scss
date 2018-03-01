@@ -19,10 +19,9 @@ header {
   .title {
     writing-mode: vertical-rl;
     right: 20%;
-    left: 0;
-    // max-width: 1140px;
+    max-width: 1140px;
     margin: auto;
-    top: 30%;
+    top: 20vh;
     letter-spacing: 10px;
     z-index: 1;
     pointer-events: none;
@@ -31,8 +30,8 @@ header {
       max-width: 100px;
     }
     @media screen and (max-width: 768px) {
-      top: 10%;
-      right: 58%;
+      top: 12vh;
+      right: 50%;
       letter-spacing: 5px;
       transform: translate(50%);
       h2 {
@@ -43,10 +42,30 @@ header {
       font-weight: 100;
     }
   }
+  a{
+    color:#fff;
+    &:hover{
+      color:darken(#fff,10%);
+    }
+  }
   nav {
     z-index: 99;
     position: relative;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    
+  }
+  .navbar{
+    &.down{
+      position: fixed;
+      background-color: rgba(#fff,.6);
+      z-index: 99;
+      top: 0;
+      width: 100%;
+      a{
+        color:#666;
+      }
+
+    }
   }
 
   .heroImg {

@@ -22,70 +22,58 @@
 
 <body>
     <script>
-        window.fbAsyncInit = function () { 
-            FB.init({ appId: '288053411702507',
-         xfbml: true, cookie: false,
-          version: 'v2.5' }); };
-           (function (d, s, id) { 
-               var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
-        // window.fbAsyncInit = function () {
-        //     FB.init({
-        //         appId: '288053411702507',
-        //         autoLogAppEvents: true,
-        //         xfbml: true,
-        //         version: 'v2.12'
-        //     });
-        // };
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true, cookie: false,
+                version: 'v2.5'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-        // (function (d, s, id) {
-        //     var js, fjs = d.getElementsByTagName(s)[0];
-        //     if (d.getElementById(id)) { return; }
-        //     js = d.createElement(s); js.id = id;
-        //     js.src = "http://connect.facebook.net/en_US/sdk.js";
-        //     fjs.parentNode.insertBefore(js, fjs);
-        // }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <div id="wrap">
         <!-- header -->
         <div class="row no-gutters">
             <div class="col-12">
-                <header class="position-relative">
-                    <div class="container">
-                        <nav class="p-md-2">
-
-                            <div class="d-md-flex" style="width:100%">
-                                <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
-                                    <a href="index.html" class="d-inline-block p-2 text-light">
-                                        <img src="content/img/title.svg" alt="" width="150px">
-                                    </a>
-                                    <a class="d-inline-block d-md-none p-2 text-light" id="menu">
-                                        <img src="content/img/menu.svg" alt="" width="30px">
-                                    </a>
-                                </div>
-                                <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
-                                    <li class="nav-item">
-                                        <a href="index.html" class="d-block p-2 text-light active">首頁</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="video.html" class="d-block p-2 text-light">線上單元劇</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="gallery.html" class="d-block p-2 text-light"> 劇照下載</a>
-                                    </li>
-                                   
-                                    <li class="nav-item">
-                                        <a href="wine.html" class="d-block p-2 text-light">心情酒譜</a>
-                                    </li>
-                                    
-                                </ul>
+                <header>
+                    <div class="navbar">
+                        <nav class="container d-md-flex ">
+                            <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                <a href="index.html" class="d-inline-block p-2 text-light">
+                                    <img src="content/img/title.svg" alt="" width="150px">
+                                </a>
+                                <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                    <img src="content/img/menu.svg" alt="" width="30px">
+                                </a>
                             </div>
+                            <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                <li class="nav-item">
+                                    <a href="index.html" class="d-block p-2 active">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="video.html" class="d-block p-2">線上單元劇</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="d-block p-2"> 劇照下載</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="wine.html" class="d-block p-2">心情酒譜</a>
+                                </li>
+                            </ul>
                         </nav>
+                    </div>
+
+                    <div class="container position-relative">
+
                         <div class="title position-absolute">
                             <img src="/content/img/maintitle.png" alt="">
                         </div>
                     </div>
-                    
+
                     <div class="heroImg">
                         <img src="content/img/bg.png" alt="" class="img-fluid d-none d-md-block">
                         <img src="content/img/bg_m.png" alt="" class="img-fluid d-block d-md-none">
@@ -108,33 +96,23 @@
                                     <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
                                 </a>
                             </div>
-<!--
-                            <div class="col-4">
-                                <img src="content/img/videofont.svg" alt="" class="img-fluid">
-                            </div>
--->
                         </div>
-
-
-
                     </div>
                 </div>
 
             </div>
         </div>
         <div class="container my-3">
-        
-<div class="row">
-   <div class="section-title">
+
+            <div class="row">
+                <div class="section-title">
                     <h3 class="text-center">主題曲</h3>
                 </div>
-    <div class="col-md-10  m-auto" style="padding-top: 30px">
-        <div id="aplayer1" class="aplayer"></div>
-    </div>
-</div>
+                <div class="col-md-10  m-auto" style="padding-top: 30px">
+                    <div id="aplayer1" class="aplayer"></div>
+                </div>
+            </div>
         </div>
-        
-      
         <!-- 劇照 -->
         <div class="photography">
             <div class="container">
@@ -250,9 +228,10 @@
         </div>
         <footer class="text-center">
             <a href="">
-                <img src="content/img/logo.svg?2" alt=""></a>
-                <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
-            
+                <img src="content/img/logo.svg?2" alt="">
+            </a>
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
+
         </footer>
         <!-- Modal -->
         <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalTitle" aria-hidden="true">
@@ -327,16 +306,16 @@
             }
         });
 
-        
+
         $(function () {
-          
-                // 增加按鈕到player
-               var playbtn = `<div class="player-btngroup">
+
+            // 增加按鈕到player
+            var playbtn = `<div class="player-btngroup">
                                 <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
                                     <small>Download MP3</small>
                                     </a>
                             <div>`
-               $('#aplayer1').append(playbtn);
+            $('#aplayer1').append(playbtn);
 
             // 選單
             $('#menu').click(function () {
@@ -375,7 +354,7 @@
 
         })
         // fb分享
-        $('body').on('click', '.shareBtn',function () {
+        $('body').on('click', '.shareBtn', function () {
             event.preventDefault();
             var image = $(this).parents().find('.modal-body img').attr('src');
             // console.log(image);
@@ -410,13 +389,13 @@
             $("#movieModal").modal('show');
         }
 
-       $("#movieModal").on('hidden.bs.modal', function (e) {
+        $("#movieModal").on('hidden.bs.modal', function (e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
-        
+
     </script>
 
-   
+
 </body>
 
 </html>
