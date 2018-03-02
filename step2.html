@@ -168,6 +168,7 @@
     <script type="text/javascript">
 
         var canvas = new fabric.Canvas('c');
+
         // 畫布大小
         var desktop = document.querySelector('.deskWidth');
         // console.log(desktop)
@@ -178,9 +179,9 @@
         var imgInstance = new fabric.Image(imgElement, {
             left: 0,
             top: 0,
-            opacity: 1,
-
+            opacity: 1
         });
+        
         // 增加文字欄
         var textbox = new fabric.Textbox('輸入心情', {
             left: 150,
@@ -191,6 +192,7 @@
             borderColor: 'blue'
 
         });
+
         console.log(imgInstance);
        
 
