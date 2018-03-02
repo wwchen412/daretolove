@@ -122,22 +122,25 @@
             <div class="upload-section row">
 
                 <div class="btns mb-1 col-10 offset-1">
-                    <input type="image" src="content/img/back_btm.svg" width="40px" height="40px">
-                    
+                    <a href="javascript:window.history.go(-1)">
+                        <img alt="" src="content/img/back_btm.svg" width="40px" height="40px">
+                    </a>
+
                 </div>
-                <div class="col-10 offset-1 deskWidth">
+                <div class="col-10 offset-1">
                     <div class="img-wrap position-relative">
                         <div class="client-img" style="background:#eee;">
-                            <canvas id="c" height="500"></canvas>
-                           
-                        </div>
+                            <canvas id="c"></canvas>
 
-                        <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div>
+                        </div>
+                        <img src="content/img/demo.png" class="deskWidth img-fluid  position-absolute" id="clientImg">
+                        <!-- <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div> -->
                     </div>
-                   
+
+
                 </div>
                 <div class="col-12 text-center">
-                    <button class="btn btn-danger px-5 mt-3 mb-4">下一步</button>
+                    <a href="done.html" class="btn btn-danger px-5 mt-3 mb-4">下一步</a>
                 </div>
             </div>
         </div>
@@ -163,46 +166,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.1.0/fabric.min.js"></script>
 
     <script type="text/javascript">
-        
-    var canvas = new fabric.Canvas('c');
+
+        var canvas = new fabric.Canvas('c');
         // 畫布大小
         var desktop = document.querySelector('.deskWidth');
-        window.addEventListener('resize', resizeCanvas, false);
+        // console.log(desktop)
+        var imgElement = document.getElementById('clientImg');
 
-        // 改變大小時重新計算畫布大小
-        function resizeCanvas() {
-            // canvas.setHeight(window.innerHeight);
-            canvas.setWidth(desktop.clientWidth - 30);
-            canvas.renderAll();
-        }
-     
-        // resize on init
-        resizeCanvas();
 
+        // 使用者上傳的照片
+        var imgInstance = new fabric.Image(imgElement, {
+            left: 0,
+            top: 0,
+            opacity: 1,
+
+        });
         // 增加文字欄
         var textbox = new fabric.Textbox('輸入心情', {
             left: 150,
             top: 50,
             width: 150,
             fontSize: 20,
-            fill:'#fff',
+            fill: '#fff',
             borderColor: 'blue'
 
-        }); 
-        
-       
-        canvas.add(textbox);
-        var img = 'content/img/demo.png';   
-       fabric.Image.fromURL(img, function (oImg) {
-            canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
-               scaleX: canvas.width / img.width,
-               scaleY: canvas.height / img.height,
-            
-           });
-
         });
+        console.log(imgInstance);
        
-        
+
+
+
+        window.addEventListener('resize', resizeCanvas, false);
+
+        // 改變大小時重新計算畫布大小
+        function resizeCanvas() {
+            canvas.setHeight(desktop.clientHeight);
+            console.log(desktop.clientHeight)
+            canvas.setWidth(desktop.clientWidth);
+            canvas.renderAll();
+        }
+
+        // resize on init
+        resizeCanvas();
+
+        canvas.add(textbox);
+        canvas.add(imgInstance);
+
+
+
         $(function () {
 
             // 選單

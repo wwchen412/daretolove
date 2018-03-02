@@ -70,6 +70,27 @@
 
             });
         }
+        function shareImg() {
+            let image = document.querySelector('.client-img img').getAttribute('src');
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.shares',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': 'http://kkl.daretolove.tw/event.html', // your url to share
+                        'og:title': 'Dare to love',
+                        'og:description': '我的心情我的酒',
+                        'og:image:url': image,
+                        'og:image:width': '1920',
+                        'og:image:height': '1200',
+                    }
+                })
+            }, function (response) {
+                // Debug response (optional)
+                console.log(response);
+            });
+        }
+        
 
     </script>
 
@@ -123,15 +144,15 @@
 
                 <div class="btns d-flex justify-content-between  col-10 offset-1">
                     
-                    <label for="upload" class="btn btn-primary text-light px-5 ml-auto">
-                        <input type="file" class="d-none" id="upload" accept="image/*" > 
+                    <a href="http://kkl.daretolove.tw/content/img/doneImg.png"  download class="btn btn-primary text-light px-5 ml-auto mb-3">
+                       
                         Download
-                    </label>
+                    </a>
                 </div>
                 <div class="col-10 offset-1">
                     <div class="img-wrap position-relative">
                         <div class="client-img" style="background:#eee;">
-                            <img src="content/img/doneImg.png" alt="" class="img-fluid d-block">
+                            <img src="http://kkl.daretolove.tw/content/img/doneImg.png" alt="" class="img-fluid d-block">
                         </div>
 
                         <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div>
@@ -140,10 +161,10 @@
                 <div class="col-10 offset-1">
                     <div class="row">
                         <div class="col-6 text-center mt-3">
-                            <div class="btn btn-primary text-light" style="width:100%">再次製作</div>
+                            <a href="step1.html" class="btn btn-primary text-light" style="width:100%">再次製作</a>
                         </div>
                         <div class="col-6 text-center mt-3">
-                            <div class="btn btn-primary text-light" style="width:100%">分享至FB</div>
+                            <button class="btn btn-primary text-light" style="width:100%" onclick="shareImg()">分享至FB</button>
                         </div>
                     </div>
                 </div>
@@ -171,24 +192,8 @@
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
-
-
     <script type="text/javascript">
-        {
-            // let upload = document.querySelector('#upload');
-            // upload.addEventListener('change', loadFile(event));
-
-            var loadFile = function (event) {
-                var reader = new FileReader();
-                reader.onload = function () {
-
-                    var output = document.querySelector('.client-img img');
-                    console.log(output)
-                    output.src = reader.result;
-                };
-                reader.readAsDataURL(event.target.files[0]);
-            };
-        }
+        
 
         $(function () {
 
@@ -203,7 +208,6 @@
 
 
     </script>
-
 
 </body>
 

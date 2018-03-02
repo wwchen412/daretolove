@@ -561,13 +561,14 @@ footer {
     cursor: pointer;
   }
 }
-
+// 標語
 .signgal {
   background-color: #000;
   width: 100%;
   left: 0;
   bottom: 0;
   height: 10vh;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -629,6 +630,11 @@ footer {
   background-position: left bottom ;
   background-repeat: no-repeat;
   pointer-events: none;
+}
+.deskWidth{
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
 }
 .client-img{
   width: 100%;
