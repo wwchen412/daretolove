@@ -24,56 +24,54 @@
 
 <body>
     <script>
-        // This is called with the results from from FB.getLoginStatus().
-        function statusChangeCallback(response) {
-            console.log('statusChangeCallback');
-            console.log(response);
-            // The response object is returned with a status field that lets the
-            // app know the current login status of the person.
-            // Full docs on the response object can be found in the documentation
-            // for FB.getLoginStatus().
-            if (response.status === 'connected') {
-                // Logged into your app and Facebook.
-                testAPI();
-            } else {
-                // The person is not logged into your app or we are unable to tell.
-                document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
-            }
-        }
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true,
+                cookie: false,
+                status: true,
+                version: 'v2.7'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; } js = d.createElement(s);
+            js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-        // This function is called when someone finishes with the Login
-        // Button.  See the onlogin handler attached to it in the sample
-        // code below.
+        // 登入檢查
         function checkLoginState() {
             FB.getLoginStatus(function (response) {
                 statusChangeCallback(response);
             });
         }
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
 
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '288053411702507',
-                xfbml: true, cookie: false,
-                version: 'v2.5'
-            });
-        };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                KKLAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                // document.getElementById('status').innerHTML = 'Please log ' +
+                //     'into this app.';
+            }
+        }
 
-        // Here we run a very simple test of the Graph API after login is
-        // successful.  See statusChangeCallback() for when this call is made.
-        function testAPI() {
-            console.log('Welcome!  Fetching your information.... ');
+        // 登入成功後執行
+
+        function KKLAPI() {
+            // console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function (response) {
                 console.log('Successful login for: ' + response.name);
-                document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
+
             });
         }
+
     </script>
-   
 
     <div id="wrap">
         <!-- header -->
@@ -110,62 +108,38 @@
                         </nav>
                     </div>
 
-                    <div class="container position-relative">
-
-
-                    </div>
-
-                    <div class="heroImg position-relative">
-                        <img src="content/img/eventbg.png" alt="" class="img-fluid d-none d-md-block">
-                        <img src="content/img/eventbg.png" alt="" class="img-fluid d-block d-md-none">
-                        <div class="position-absolute gotoEvent text-center">
-                            <a href="terms.html" class="btn btn-danger px-4 text-light mb-3">前往活動</a>
-                            <h3>Dare To Love</h3>
-                            <p>分享你的愛情故事照片，選擇你當下的心情與劇中出現的金門高粱酒調酒並且對照片寫下當時的心得，並分享至你的臉書塗鴉牆。</p>
-                        </div>
-                    </div>
                 </header>
             </div>
 
         </div>
 
-        <!-- 照片牆-->
-        <div class="photoWall">
-            <div class="container">
-                <div class="section-title my-5">
-                    <h4 class="text-center">
-                        <a href="" class="d-inline-block mx-3 active">心情分享</a>
-                        <a href="" class="d-inline-block mx-3">我的心情</a>
-                    </h4>
+        <div class="container my-5">
+            <div class="section-title text-center">
+                <h3>第一步</h3>
+
+            </div>
+            <p class="text-center my-4">上傳照片並選擇一款最符合心情的調酒</p>
+            <div class="upload-section row">
+
+                <div class="btns d-flex justify-content-between  col-10 offset-1">
+                    <input type="image" src="content/img/back_btm.svg" width="40px" height="40px">
+                    <label for="upload" class="btn btn-secondary text-light px-5" style="background:#666666">
+                        <input type="file" class="d-none" id="upload" accept="image/*" onchange="loadFile(event)"> 上傳照片
+                    </label>
                 </div>
-                <div class="lists">
-                    <div class="list row mb-3">
-                        <div class="col-md-6">
-                            <img src="content/img/mood.png" alt="" class="img-fluid">
+                <div class="col-10 offset-1">
+                    <div class="img-wrap position-relative">
+                        <div class="client-img" style="background:#eee;">
+                            <img src="content/img/demo.png" alt="" class="img-fluid d-block" >
                         </div>
-                        <div class="col-md-6">
-                            <p>facebook name</p>
-                        </div>
+
+                        <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div>
                     </div>
-                    <div class="list row mb-3">
-                        <div class="col-md-6">
-                            <img src="content/img/mood_1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-md-6">
-                            <p>facebook name</p>
-                        </div>
-                    </div>
-                    <div class="list row mb-3">
-                        <div class="col-md-6">
-                            <img src="content/img/mood_2.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-md-6">
-                            <p>facebook name</p>
-                        </div>
-                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger px-5 mt-3 mb-4">下一步</button>
                 </div>
             </div>
-
         </div>
         <footer class="text-center">
             <a href="">
@@ -190,6 +164,21 @@
 
 
     <script type="text/javascript">
+        {
+            // let upload = document.querySelector('#upload');
+            // upload.addEventListener('change', loadFile(event));
+
+            var loadFile = function (event) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                  
+                    var output = document.querySelector('.client-img img');
+                    console.log(output)
+                    output.src = reader.result;
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            };
+        }
 
         $(function () {
 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fb OG -->
+    <meta property="og:url" content="http://kkl.daretolove.tw/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dare to Love" />
+    <meta property="og:description" content="金門酒廠 我的心情我的酒" />
+    <meta property="og:image" content="http://kkl.daretolove.tw/content/img/bg.png" />
+
+    <title>Dare to love</title>
+    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="content/css/wine.css">
+    <link rel="stylesheet" href="content/css/APlayer.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
+
+
+
+</head>
+
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true,
+                cookie: false,
+                status: true,
+                version: 'v2.7'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; } js = d.createElement(s);
+            js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // 登入檢查
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                KKLAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                // document.getElementById('status').innerHTML = 'Please log ' +
+                //     'into this app.';
+            }
+        }
+
+        // 登入成功後執行
+
+        function KKLAPI() {
+            // console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                // console.log('Successful login for: ' + response.name);
+                window.location.href = 'step1.html'
+
+            });
+        }
+
+    </script>
+
+    <div id="wrap">
+        <!-- header -->
+        <div class="row no-gutters">
+            <div class="col-12">
+                <header>
+                    <div class="nav-bar">
+                        <nav class="container d-md-flex ">
+                            <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                <a href="index.html" class="d-inline-block p-2 text-light">
+                                    <img src="content/img/title.svg" alt="" width="150px">
+                                </a>
+                                <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                    <img src="content/img/menu.svg" alt="" width="30px">
+                                </a>
+                            </div>
+                            <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                <li class="nav-item">
+                                    <a href="index.html" class="d-block p-2 active">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="video.html" class="d-block p-2">線上單元劇</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="d-block p-2"> 劇照下載</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="wine.html" class="d-block p-2">心情酒譜</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="music.html" class="d-block p-2">MV歌曲</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </header>
+            </div>
+
+        </div>
+
+        <div class="container my-5">
+            <h4 class="text-center">Dare To love</h4>
+            <h4 class="text-center mb-5">活動聲明</h4>
+            <div class="terms-content p-3 bg-light rounded">
+                <p>
+                    誠品網路書店所蒐集的個人資料？
+                    <br> 誠品網路書店以多種方式從網站的不同部分蒐集個人資料，敬請詳細閱讀以下說明。若您不願提供個人資料或不同意本聲明，請立即停止使用誠品網路書店提供之服務。若您提供個人資料予誠品網路書店，則視為您同意本聲明。
+                    <br> 誠品網路書店對使用者所蒐集之個人資料分非公開性資料及公開性資料兩種：
+                    <br> 非公開性資料：
+                    <br> (1)會員註冊：
+                    <br> 當您註冊成為「誠品網路書店會員」時, 誠品網路書店會請您提供您的個人資訊 ,包括姓名、性別、國籍、生日、電子信箱、身份證字號、聯絡住址、電話、帳號、密碼、職業和個人興趣等私密性之資料。這些動作僅為了完成您的訂購手續、隨時查看訂購的情況，為了針對處理您個人訂單與提供更友善的個人化購書服務，因此我們希望您能夠提供詳細與準確的資料。一經註冊後，您會獲得一個「誠品網友」的會員帳號，並且由該帳號充分使用誠品網路書店提供的所有會員服務。請您妥善保密您的網路密碼與個人資料，不要將任何個人資料，尤其是網路密碼提供給任何人，以保障您的資料安全。
+                    <br> (2)線上活動：
+                    <br> 當您參與誠品網路書店舉辦的各項線上活動查詢時，我們會請您提供姓名、身份證字號、電話、電子信箱及住址等私密性資料。
+                    <br> 公開性資料：
+                    <br> (1)一般瀏覽：
+                    <br> 為整體評估各個網頁的流量、使用者進入誠品網路書店之路徑等資料，我們會保留您在上網瀏覽時，伺服器自行產生的相關記錄，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等。
+                    <br> (2)其他：
+                    <br> 若您寫信與誠品網路書店聯繫，或線上「給誠品書店的其他建議」反應您的意見 , 誠品網路書店會保存您的通訊記錄。
+                    <br> 特別注意事項：
+                    <br> (1)本聲明所保護之使用者個人資料不包括使用者之「一般性資料」。
+                    <br> (2)若您所提供之個人資料若有錯誤、不正確情事者，亦不受本聲明之保護。
+                    <br>
+                    <br> 請聯絡我們：若您對誠品網路書店的隱私權聲明有任何疑問，歡迎與我們聯繫，我們會加以說明。
+                    <br>
+                </p>
+            </div>
+            <div class="text-center mt-5">
+                <label for="" class="d-block mb-5">
+                    <input type="checkbox" name="" id=""> 我同意以上聲明確認參加活動
+                </label>
+                <button class="btn btn-danger px-5 btn-lg join">參加活動</button>
+            </div>
+
+        </div>
+        <footer class="text-center">
+            <a href="">
+                <img src="content/img/logo.svg?2" alt="">
+            </a>
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
+
+        </footer>
+
+    </div>
+    <!-- 標語 -->
+    <div class="position-fixed signgal p-3">
+        <img src="content/img/footer_fixed_font.svg" alt="" class="img-fluid">
+    </div>
+    <!-- jQuery JS 1.12.4 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/APlayer.min.js"></script>
+
+
+    <script type="text/javascript">
+        // 參加活動
+        document.querySelector('.join').addEventListener('click', join);
+
+        function join() {
+            event.preventDefault();
+            var agree = document.querySelector('input[type="checkbox"]');
+            if(agree.checked){
+                // console.log('checked');
+                checkLoginState();
+            }else{
+                alert('請同意活動聲明後參加活動！')
+                
+            }
+         
+        }
+
+        $(function () {
+
+            // 選單
+            $('#menu').click(function () {
+                $('nav').toggleClass('active');
+                $('body').toggleClass('active');
+            });
+
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
