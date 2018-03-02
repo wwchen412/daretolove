@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fb OG -->
+    <meta property="og:url" content="http://kkl.daretolove.tw/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dare to Love" />
+    <meta property="og:description" content="金門酒廠 我的心情我的酒" />
+    <meta property="og:image" content="http://kkl.daretolove.tw/content/img/bg.png" />
+
+    <title>Dare to love</title>
+    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="content/css/wine.css">
+    <link rel="stylesheet" href="content/css/APlayer.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
+
+
+
+</head>
+
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '288053411702507',
+                xfbml: true, cookie: false,
+                version: 'v2.5'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div id="wrap">
+        <!-- header -->
+        <div class="row no-gutters">
+            <div class="col-12">
+                <header>
+                    <div class="nav-bar">
+                        <nav class="container d-md-flex ">
+                            <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                <a href="index.html" class="d-inline-block p-2 text-light">
+                                    <img src="content/img/title.svg" alt="" width="150px">
+                                </a>
+                                <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                    <img src="content/img/menu.svg" alt="" width="30px">
+                                </a>
+                            </div>
+                            <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                <li class="nav-item">
+                                    <a href="index.html" class="d-block p-2 active">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="video.html" class="d-block p-2">線上單元劇</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="d-block p-2"> 劇照下載</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="wine.html" class="d-block p-2">心情酒譜</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="music.html" class="d-block p-2">MV歌曲</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="container position-relative">
+
+
+                    </div>
+
+                    <div class="heroImg position-relative">
+                        <img src="content/img/eventbg.png" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/eventbg.png" alt="" class="img-fluid d-block d-md-none">
+                        <div class="position-absolute gotoEvent text-center">
+                            <a href="" class="btn btn-danger px-4 text-light mb-3">前往活動</a>
+                            <h3>Dare To Love</h3>
+                            <p>分享你的愛情故事照片，選擇你當下的心情與劇中出現的金門高粱酒調酒並且對照片寫下當時的心得，並分享至你的臉書塗鴉牆。</p>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+        </div>
+
+        <!-- 照片牆-->
+        <div class="photoWall">
+            <div class="container">
+                <div class="section-title my-5">
+                    <h4 class="text-center">
+                        <a href="" class="d-inline-block mx-3 active">心情分享</a>
+                        <a href="" class="d-inline-block mx-3">我的心情</a>
+                    </h4>
+                </div>
+                <div class="lists">
+                    <div class="list row mb-3">
+                        <div class="col-md-6">
+                            <img src="content/img/mood.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <p>facebook name</p>
+                        </div>
+                    </div>
+                    <div class="list row mb-3">
+                        <div class="col-md-6">
+                            <img src="content/img/mood_1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <p>facebook name</p>
+                        </div>
+                    </div>
+                    <div class="list row mb-3">
+                        <div class="col-md-6">
+                            <img src="content/img/mood_2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <p>facebook name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="text-center">
+            <a href="">
+                <img src="content/img/logo.svg?2" alt="">
+            </a>
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
+
+        </footer>
+
+    </div>
+    <!-- 標語 -->
+    <div class="position-fixed signgal p-3">
+        <img src="content/img/footer_fixed_font.svg" alt="" class="img-fluid">
+    </div>
+    <!-- jQuery JS 1.12.4 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/APlayer.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            // 選單
+            $('#menu').click(function () {
+                $('nav').toggleClass('active');
+                $('body').toggleClass('active');
+            });
+
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>

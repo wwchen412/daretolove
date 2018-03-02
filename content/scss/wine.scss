@@ -62,7 +62,7 @@ header {
     }
   }
   .nav-bar {
-    a{
+    a {
       text-align: center;
     }
     &.down {
@@ -88,7 +88,7 @@ header {
     }
   }
   .heroImg {
-    margin-top: -59px;
+    margin-top: -65px;
     height: 100vh;
     position: relative;
     &:after {
@@ -576,5 +576,46 @@ footer {
     display: block;
     width: 650px;
     margin: 0 auto;
+  }
+}
+
+// event Page
+.gotoEvent {
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.photoWall {
+  .section-title {
+    a {
+      color: #000;
+      text-decoration: none;
+      &.active{
+border-bottom: 2px solid #f00;
+      }
+      
+    }
+  }
+  .list {
+    p {
+      margin-top: 2rem;
+      padding: 0.5rem 1.2rem;
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+    }
+    @media screen and (min-width: 769px) {
+      &:nth-child(2n) {
+        & > div {
+          &:nth-child(1) {
+            order: 1;
+          }
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+    }
   }
 }
