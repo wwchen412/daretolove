@@ -30,7 +30,7 @@ header {
     pointer-events: none;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     img {
-      max-width: 90px;
+      width: 90px;
     }
     @media screen and (max-width: 768px) {
       top: 0;
@@ -362,7 +362,7 @@ footer {
   display: flex;
   margin-top: -60px;
   overflow: hidden;
-  background: url('../img/winebg.png');
+  background: url('../img/wine_bg02.png');
   background-size: cover;
   @media screen and (max-width: 768px) {
     height: 100%;
