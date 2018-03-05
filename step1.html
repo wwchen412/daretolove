@@ -125,25 +125,31 @@
                     <a href="event.html">
                         <img alt="" src="content/img/back_btm.svg" width="40px" height="40px">
                     </a>
-                   
+
                     <label for="upload" class="btn btn-secondary text-light px-5" style="background:#666666">
                         <input type="file" class="d-none" id="upload" accept="image/*" onchange="loadFile(event)"> 上傳照片
                     </label>
                 </div>
                 <div class="col-10 offset-1">
                     <div class="img-wrap position-relative">
+                        <!-- 上傳的圖 -->
                         <div class="client-img" style="background:#eee;">
-                            <img src="content/img/demo.png" alt="" class="img-fluid d-block" >
+                            <img src="content/img/demo.png" alt="" class="img-fluid d-block">
                         </div>
-
-                        <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div>
+                        <div class="arrow prev position-absolute">◀</div>
+                        <div class="arrow next position-absolute">▶</div>
+                        <!-- 框框 -->
+                        <div class="img-wire position-absolute">
+                            <img src="content/img/frame01.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 text-center">
-                    <a href="step2.html" class="btn btn-danger px-5 mt-3 mb-4">下一步</a>
+                    <a href="step2.html" class="btn btn-danger px-5 mt-3 mb-4 nextBtn">下一步</a>
                 </div>
             </div>
         </div>
+
         <footer class="text-center">
             <a href="">
                 <img src="content/img/logo.svg?2" alt="">
@@ -168,29 +174,70 @@
 
     <script type="text/javascript">
         {
-            // let upload = document.querySelector('#upload');
-            // upload.addEventListener('change', loadFile(event));
+            // 可用的框框
+            let frames = ['content/img/frame01.png',
+                'content/img/frame02.png',
+                'content/img/frame03.png',
+                'content/img/frame04.png'],
+                clickTimes = 0,
+                frame = document.querySelector('.img-wire img'),
+                prev = document.querySelector('.arrow.prev'),
+                next = document.querySelector('.arrow.next');
+            let imgBase64 = '';
+            // 選擇框框
+            prev.addEventListener('click', prevBtn);
+            next.addEventListener('click', nextBtn);
 
+            function prevBtn() {
+                if (clickTimes <= frames.length && clickTimes > 0) {
+                    clickTimes--
+                    frame.setAttribute('src', frames[clickTimes])
+                } else if (clickTimes = 4) {
+                    clickTimes = 3
+                    frame.setAttribute('src', frames[clickTimes])
+                }
+
+            }
+            function nextBtn() {
+                if (clickTimes < frames.length - 1 && clickTimes >= 0) {
+                    clickTimes++
+                    frame.setAttribute('src', frames[clickTimes])
+                } else if (clickTimes = 1) {
+                    clickTimes = 0
+                    frame.setAttribute('src', frames[clickTimes])
+                }
+
+            }
+            // 選擇上傳的檔案變換圖
             var loadFile = function (event) {
                 var reader = new FileReader();
                 reader.onload = function () {
-                  
                     var output = document.querySelector('.client-img img');
-                    console.log(output)
                     output.src = reader.result;
+                    imgBase64 = reader.result;
                 };
                 reader.readAsDataURL(event.target.files[0]);
             };
+            // 按下一步後送出圖片資料以及選擇的圖框
+            document.querySelector('.nextBtn').addEventListener('click', function (event) {
+                event.preventDefault();
+                // 選擇的框框
+                console.log(frame.getAttribute('src'));
+                // 圖片轉出的base64
+                console.log(imgBase64);
+                // 送出後轉跳
+                window.location.href = 'step2.html';
+            })
+
         }
 
         $(function () {
-
             // 選單
             $('#menu').click(function () {
                 $('nav').toggleClass('active');
                 $('body').toggleClass('active');
             });
-
+            $('.carousel').carousel()
 
         })
 
