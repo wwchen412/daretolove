@@ -175,6 +175,14 @@
         var imgElement = document.getElementById('clientImg').getAttribute('src');
         // 使用者上傳的照片
         var img = imgElement;
+        // ------------------------------------
+        
+        // !需更換內容
+        // 框框圖片連結替換成上一頁選擇的框
+        // 
+        var frame = 'content/img/frame01.png';
+
+        // -------------------------------------
         // 讓圖片符合畫布大小
         function resizeimg() {
             // console.log(desktop.width);
@@ -187,9 +195,9 @@
                 });
             })
         }
-        // 選擇的框框
+        // 選擇的框框 
         function wireimg() {
-            fabric.Image.fromURL('content/img/wire.png', function (img) {
+            fabric.Image.fromURL('content/img/frame01.png', function (img) {
                 var oImg = img.set({
                     left: 0,
                     bottom: 0,
