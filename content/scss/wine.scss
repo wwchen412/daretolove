@@ -15,6 +15,9 @@ html {
 $colormain: #9dd1dc;
 
 // header 首頁大圖
+.filterTitle{
+  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7)); 
+filter: drop-shadow(10 0 3px rgba(0, 0, 0, 0.7));}
 header {
   .title {
     writing-mode: vertical-rl;
@@ -357,7 +360,10 @@ footer {
   position: relative;
   height: calc(100vh - 60px);
   display: flex;
+  margin-top: -60px;
   overflow: hidden;
+  background: url('../img/winebg.png');
+  background-size: cover;
   @media screen and (max-width: 768px) {
     height: 100%;
   }
@@ -402,7 +408,7 @@ footer {
   // height: calc(100vh - 60px);
   height: 100%;
   // border: 1px solid #f00;
-  z-index: -1;
+  z-index: 0;
   &:before {
     content: "";
     display: block;
@@ -419,8 +425,10 @@ footer {
   .wave-svg-shape {
     position: absolute;
     width: 100%;
-    bottom: -30%;
-    animation: fill 3s linear forwards;
+    top:0%;
+    transform:rotateZ(180deg);
+    animation: fill 3s 1s linear forwards;
+   
     svg {
       display: block;
       width: 150%;
@@ -435,31 +443,31 @@ footer {
 
 @keyframes fill {
   0% {
-    bottom: -100%;
+    top:0;
   }
   100% {
-    bottom: -10%;
+    top:  -100%;
   }
 }
-@media screen and (max-width: 768px) {
-  @keyframes fill {
-    0% {
-      bottom: -100%;
-    }
-    100% {
-      bottom: 0;
-    }
-  }
-}
+// @media screen and (max-width: 768px) {
+//   @keyframes fill {
+//     0% {
+//       bottom: -100%;
+//     }
+//     100% {
+//       bottom: 0;
+//     }
+//   }
+// }
 
-@keyframes wave {
-  0% {
-    transform: translate(-33%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
+// @keyframes wave {
+//   0% {
+//     transform: translate(-33%) rotateY(90deg);
+//   }
+//   100% {
+//     transform: translateX(0%) rotateY(90deg);
+//   }
+// }
 
 // 警告頁
 .warning {
@@ -573,9 +581,14 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+ @media screen and (min-width: 768px) {
+    padding: 0;
+  }
   img {
     display: block;
     width: 650px;
+    height: 6vh;
     margin: 0 auto;
   }
 }
