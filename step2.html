@@ -130,11 +130,12 @@
                 <div class="col-10 offset-1">
                     <div class="img-wrap position-relative">
                         <div class="client-img" style="background:#eee;">
-                            <canvas id="c"></canvas>
+                            <canvas id="c" style="background-size:cover"></canvas>
 
                         </div>
+                        <!-- step1中使用者上傳的圖片 -->
                         <img src="content/img/demo.png" class="deskWidth img-fluid  position-absolute" id="clientImg">
-                        <!-- <div class="img-wire position-absolute" style="background-image:url('content/img/wire.svg')"></div> -->
+
                     </div>
 
 
@@ -166,67 +167,87 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.1.0/fabric.min.js"></script>
 
     <script type="text/javascript">
-
+        // 定義畫布
         var canvas = new fabric.Canvas('c');
-
-        // 畫布大小
+        // 畫布大小依據
         var desktop = document.querySelector('.deskWidth');
-        // console.log(desktop)
-        var imgElement = document.getElementById('clientImg');
-
-
+        // 從結構中得到上傳的圖片路徑 (or data)
+        var imgElement = document.getElementById('clientImg').getAttribute('src');
         // 使用者上傳的照片
-        var imgInstance = new fabric.Image(imgElement, {
-            left: 0,
-            top: 0,
-            opacity: 1
-        });
-        
+        var img = imgElement;
+        // 讓圖片符合畫布大小
+        function resizeimg() {
+            // console.log(desktop.width);
+            fabric.Image.fromURL(img, function (img) {
+                canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                    scaleX: desktop.clientWidth / img.width,
+                    scaleY: desktop.clientHeight / img.height,
+                    originX: 'left',
+                    originY: 'top'
+                });
+            })
+        }
+        // 選擇的框框
+        function wireimg() {
+            fabric.Image.fromURL('content/img/wire.png', function (img) {
+                var oImg = img.set({
+                    left: 0,
+                    bottom: 0,
+                    scaleX: desktop.clientWidth / img.width,
+                    scaleY: desktop.clientHeight / img.height,
+                });
+                canvas.add(oImg);
+                oImg.selectable = false;
+
+            });
+        }
+        // 儲存並送出
+       function saveCanvas() {
+            canvas.toDataURL();
+            console.log(canvas.toDataURL());
+        }
         // 增加文字欄
-        var textbox = new fabric.Textbox('輸入心情', {
+        var textbox = new fabric.Textbox('在此輸入心情', {
             left: 150,
             top: 50,
-            width: 150,
+            width: 100,
             fontSize: 20,
             fill: '#fff',
-            borderColor: 'blue'
+            borderColor: '#4975DD',
+            transparentCorners: false,
+            cornerSize: 6,
 
         });
 
-        console.log(imgInstance);
+        canvas.add(textbox);
+        canvas.setActiveObject(textbox);
        
 
-
-
-        window.addEventListener('resize', resizeCanvas, false);
-
         // 改變大小時重新計算畫布大小
+         window.addEventListener('resize', resizeCanvas, false);
         function resizeCanvas() {
             canvas.setHeight(desktop.clientHeight);
-            console.log(desktop.clientHeight)
             canvas.setWidth(desktop.clientWidth);
+            resizeimg();
             canvas.renderAll();
         }
-
+        // frame框 init
+         wireimg();
         // resize on init
         resizeCanvas();
+        // 儲存canvas
 
-        canvas.add(textbox);
-        canvas.add(imgInstance);
 
+        
 
 
         $(function () {
-
             // 選單
             $('#menu').click(function () {
                 $('nav').toggleClass('active');
                 $('body').toggleClass('active');
             });
-
-
         })
-
 
     </script>
 
