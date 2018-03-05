@@ -409,6 +409,7 @@ footer {
   height: 100%;
   // border: 1px solid #f00;
   z-index: 0;
+  pointer-events: none;
   &:before {
     content: "";
     display: block;
