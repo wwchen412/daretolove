@@ -21,13 +21,13 @@ header {
     right: 20%;
     max-width: 1140px;
     margin: auto;
-    top: 10vh;
+    top: calc(10vh - 45px);
     letter-spacing: 10px;
     z-index: 1;
     pointer-events: none;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     img {
-      max-width: 100px;
+      max-width: 90px;
     }
     @media screen and (max-width: 768px) {
       top: 0;
