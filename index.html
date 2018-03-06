@@ -43,7 +43,7 @@
                     <div class="nav-bar">
                         <nav class="container d-md-flex ">
                             <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
-                                <a href="https://www.kkl.com.tw/tc/home.aspx" class="d-inline-block p-2 text-light">
+                                <a href="/" class="d-inline-block p-2 text-light">
                                     <img src="content/img/title.svg" alt="" style="width: 150px;-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));     filter: drop-shadow(10 0 3px rgba(0, 0, 0, 0.7))">
                                 </a>
                                 <a class="d-inline-block d-md-none p-2 text-light" id="menu">
@@ -64,7 +64,7 @@
                                     <a href="wine.html" class="d-block p-2">心情酒譜</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="music.html" class="d-block p-2">MV歌曲</a>
+                                    <a href="music.html" class="d-block p-2">主題曲</a>
                                 </li>
                             </ul>
                         </nav>
@@ -146,9 +146,9 @@
                         </a>
                     </li>
                     <li class="fadeIndex">
-                        <a href="" data-toggle="modal" data-target="#picModal">
+                        
                             <img class="img-fluid" src="https://kkl.daretolove.tw/content/img/phfont.svg" alt="">
-                        </a>
+                        
                     </li>
                     <li class="fadeIndex">
                         <a href="" data-toggle="modal" data-target="#picModal">
@@ -231,7 +231,7 @@
 
         </div>
         <footer class="text-center">
-            <a href="">
+            <a href="https://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt="">
             </a>
             <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有　Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
@@ -311,7 +311,7 @@
             music: {
                 title: 'Dare To Love',
                 author: '金門酒廠勇敢愛系列微電影主題曲',
-                pic: 'content/img/album.png',
+                pic: 'content/img/album.png?',
                 url: 'content/Dare_to_love.mp3',
             }
         });
@@ -370,7 +370,7 @@
                 action_type: 'og.shares',
                 action_properties: JSON.stringify({
                     object: {
-                        'og:url': 'http://kkl.daretolove.tw/#movie', // your url to share
+                        'og:url': 'https://kkl.daretolove.tw/#movie', // your url to share
                         'og:title': 'Dare to love',
                         'og:description': '我的心情我的酒',
                         'og:image:url': image,
@@ -378,7 +378,7 @@
                         'og:image:height': '1200',
                     }
                 }),
-                href: 'http://kkl.daretolove.tw/#movie',
+                href: 'https://kkl.daretolove.tw/#movie',
 
             }, function (response) {
                 alert('分享完成！')

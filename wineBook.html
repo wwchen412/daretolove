@@ -36,7 +36,7 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) { return; }
             js = d.createElement(s); js.id = id;
-            js.src = "http://connect.facebook.net/en_US/sdk.js";
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -49,7 +49,7 @@
                     <div class="nav-bar">
                         <nav class="container d-md-flex ">
                             <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
-                                <a href="https://www.kkl.com.tw/tc/home.aspx" class="d-inline-block p-2 text-light">
+                                <a href="/" class="d-inline-block p-2 text-light">
                                     <img src="content/img/title.svg" alt="" style="width: 150px;-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));     filter: drop-shadow(10 0 3px rgba(0, 0, 0, 0.7))">
                                 </a>
                                 <a class="d-inline-block d-md-none p-2 text-light" id="menu">
@@ -70,7 +70,7 @@
                                     <a href="wine.html" class="d-block p-2">心情酒譜</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="music.html" class="d-block p-2">MV歌曲</a>
+                                    <a href="music.html" class="d-block p-2">主題曲</a>
                                 </li>
                             </ul>
                         </nav>
@@ -84,7 +84,7 @@
         <div class="winebookpage py-5">
 
             <div class="container d-flex justify-content-center flex-column">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-6">
                         <img src="content/img/wine_pc001.png" alt="" class="img-fluid">
                        
@@ -98,7 +98,7 @@
                                 <br> 3.蓋上過濾器及頂蓋，以手指扣緊頂蓋及瓶底，均勻的上下搖盪約十下左右，可用單手或雙手操作。若酒材中有不易混和的材料，可多搖一兩下，至瓶身外部結霜。
                                 <br> 4.移開頂蓋，將搖酒器中飲料過濾倒至杯中。
                             </p>
-                            <a href=""  data-toggle="modal" data-target="#movieModal" class="text-light"><img src="content/img/play_icon.svg" alt="" width="30" class="mr-2">點選關看影片</a>
+                            <a href=""  data-toggle="modal" data-target="#movieModal" class="text-light"><img src="content/img/play_icon.svg" alt="" width="30" class="mr-2">點選觀看影片</a>
                         </div>
                     </div>
                 </div>
@@ -135,10 +135,10 @@
         </div>
 
         <footer class="text-center">
-            <a href="">
+            <a href="https://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt="">
             </a>
-            <p class="text-secondary py-sm-3" style="font-size: 12px;">Copyright © 2017 . All Rights Reserved.</p>
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有　Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
 
         </footer>
         <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
