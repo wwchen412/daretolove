@@ -12,7 +12,6 @@ window.addEventListener("scroll", function() {
 
 $(function() {
   $("#menu").click(function() {
-    console.log('menu');
     $("nav").toggleClass("active");
     $("body").toggleClass("active");
   });

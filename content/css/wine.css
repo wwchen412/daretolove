@@ -358,6 +358,7 @@ footer {
     transform: translate(100%, -40vh);
     opacity: 0; } }
   .winebookpage .bubble1 {
+<<<<<<< HEAD
     width: 44px;
     height: 44px;
     bottom: 6%;
@@ -427,6 +428,7 @@ footer {
     right: 46%;
     -webkit-animation: bubble 8s 13s infinite linear forwards;
     animation: bubble 8s 13s infinite linear forwards; }
+
 
 .wave {
   position: absolute;
