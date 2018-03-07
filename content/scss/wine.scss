@@ -376,6 +376,16 @@ footer {
     opacity: 0;
     transition: 1s;
   }
+  iframe{
+    animation: fadeInYoutube 1s 4s linear backwards;
+  }
+  @keyframes fadeInYoutube{
+    0%{
+      opacity: 0;
+    }100%{
+      opacity: 1;
+    }
+  }
   @keyframes bubble {
     0% {
       transform: translate(0, 0);
@@ -429,7 +439,7 @@ footer {
     width: 100%;
     top:0%;
     transform:rotateZ(180deg);
-    animation: fill 3s 1s linear forwards;
+    animation: fill 3s 3s linear forwards;
    
     svg {
       display: block;
