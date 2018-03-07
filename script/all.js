@@ -17,8 +17,10 @@ $(function() {
      var _hostname = window.location.hostname; //取得網址
 
      $(".warning .btn-outline-success").click(function(){
+          event.preventDefault();
          $.cookie("name", _hostname, { expires: 7, path: "/" });
          $.cookie("count", 1, { expires: 7, path: "/" });
+         window.location.href = "index.html";
      });
   
      window.location.href = "warning.html";
