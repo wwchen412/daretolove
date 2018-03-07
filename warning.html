@@ -40,7 +40,29 @@
 <script src="script/bootstrap.bundle.min.js"></script>
 <script src="script/APlayer.min.js"></script>
 <script src="script/jquery.cookie.js"></script>
-<script src="script/all.js?t=3"></script>
+<!-- <script src="script/all.js?t=3"></script> -->
+<script type="text/javascript">
+    $(function () {
+            if ($.cookie("name") == null) {
+                var _hostname = window.location.hostname; //取得網址
+
+                $(".warning .btn-outline-success").click(function () {
+                    event.preventDefault();
+                    $.cookie("name", _hostname, { expires: 7, path: "/" });
+                    $.cookie("count", 1, { expires: 7, path: "/" });
+                    window.location.href = "index.html";
+                });
+
+            } else {
+                var _hostname = $.cookie("name");
+                var _count = $.cookie("count");
+                $.cookie("count", _count, { expires: 7, path: "/" });
+
+            }
+
+           
+        });
+</script>
 </body>
 
 </html>
