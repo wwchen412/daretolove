@@ -94,9 +94,9 @@
                     <div class="col-md-7">
                         <div class="py-5 text-light">
                             <img src="content/img/wine_text01.png" alt="" class="img-fluid" style="width: 400px">
-                            <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive embed-responsive-16by9" >
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/HtQfo3n4LK4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                allow="autoplay; encrypted-media" allowfullscreen style="z-index:1"></iframe>
                         </div>
 <!--                            <a href=""  data-toggle="modal" data-target="#movieModal" class="text-light"><img src="content/img/play_icon.svg" alt="" width="30" class="mr-2">點選觀看影片</a>-->
                         </div>
@@ -172,50 +172,20 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
-    <scirpt src="script/jquery.cookie.js"></scirpt>
-    <script src="script/all.js"></script>
+    <script src="script/APlayer.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/all.js?t=3"></script>
+    
     <script type="text/javascript">
         $(function () {
             $('.wave-svg-shape').addClass('fill');
         })
     </script>
-    <!-- <script async src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        function onYouTubeIframeAPIReady() {
-            var player;
-            player = new YT.Player('muteYouTubeVideoPlayer', {
-                videoId: 'HtQfo3n4LK4', // YouTube Video ID
-                width: 560,
-                height: 315,
-                playerVars: {
-                    autoplay: 1,        // Auto-play the video on load
-                    controls: 0,        // Show pause/play buttons in player
-                    showinfo: 0,        // Hide the video title
-                    modestbranding: 1,  // Hide the Youtube Logo
-                    loop: 1,            // Run the video in a loop
-                    fs: 0,              // Hide the full screen button
-                    cc_load_policy: 0, // Hide closed captions
-                    iv_load_policy: 3,  // Hide the Video Annotations
-                    autohide: 1         // Hide video controls when playing
-                },
-                events: {
-                    onReady: function (e) {
-                        console.log(e.target);
-                        e.target.mute();
-
-                    }
-                }
-            });
-        }
-
-
-    </script> -->
+    
 </body>
 
 </html>
