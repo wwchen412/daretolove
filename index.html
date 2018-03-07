@@ -112,7 +112,7 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
 
-                        <div class="row no-gutters slideblock">
+                        <div class="row no-gutters slideblock" style="margin-top: -130px;">
                             <div class="col-12">
                                 <a href="" data-toggle="modal" data-target="#movieModal">
                                     <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
@@ -132,7 +132,9 @@
                 </div>
                 <div class="col-md-10  m-auto" style="padding-top: 30px">
                     <div id="aplayer1" class="aplayer"></div>
+                    <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
                 </div>
+                
             </div>
         </div>
         <!-- 劇照 -->
@@ -228,7 +230,9 @@
                                 酸梅 3 顆 <br>
                                 熱水 50 cc <br>
                                 38度 金門高粱酒 80cc <br>
-                                冰塊少許
+                                冰塊少許<br>
+                                <br>
+                                <span style="display: inline-block;padding: 2px 10px;background-color: red;border-radius: 99em;color: white;font-size: 12px">觀看酒譜影片</span>
                             </span>
                         </a>
                     </div>
@@ -310,7 +314,7 @@
     <script src="script/APlayer.min.js"></script>
 
     <script src="script/jquery.cookie.js"></script>     '
-    <script src="script/all.js?t=3"></script>
+    <script src="script/all.js?t=5"></script>
     <script type="text/javascript">
         var ap = new APlayer({
             element: document.getElementById('aplayer1'),
@@ -329,7 +333,7 @@
 
             // 增加按鈕到player
             var playbtn = `<div class="player-btngroup">
-                                <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
+                                <a href="content/Dare_to_love.mp3" class="btn btn-info" download>
                                     <small>Download MP3</small>
                                     </a>
                             <div>`
