@@ -212,7 +212,9 @@
                         var imgSrc = $(this).find('img').attr('src');
 
                         $('#picModal .modal-body img').attr('src', imgSrc);
-                        $('#picModal .downloadImg').attr('href', imgSrc);
+                        var downloadLink = imgSrc.replace('.jpg','_ori.jpg');
+                        console.log(downloadLink);
+                        $('#picModal .downloadImg').attr('href', downloadLink);
                     })
 
                 })
