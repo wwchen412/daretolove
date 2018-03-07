@@ -7,32 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- fb OG -->
     <meta property="og:url" content="https://kkl.daretolove.tw/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dare to Love" />
-    <meta property="og:description" content="金門酒廠 我的心情我的酒" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/bg.png" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
+    <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
 
-    <title>Dare to love</title>
+    <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css?t=2">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
     <!-- font -->
     <script src="https://use.typekit.net/wnv0scu.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
 </head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
-                xfbml: true, cookie: false,
+                xfbml: true,
+                cookie: false,
                 version: 'v2.5'
             });
         };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
     </script>
@@ -136,7 +153,7 @@
                             <img class="img-fluid" src="https://kkl.daretolove.tw/content/img/pics/01_00002.jpg" alt="">
                         </a>
                     </li>
-                   
+
                     <li class="fadeIndex">
                         <a href="" data-toggle="modal" data-target="#picModal">
                             <img class="img-fluid" src="https://kkl.daretolove.tw/content/img/pics/01_00003.jpg" alt="">
@@ -148,9 +165,9 @@
                         </a>
                     </li>
                     <li class="fadeIndex">
-                        
-                            <img class="img-fluid" src="https://kkl.daretolove.tw/content/img/phfont.svg" alt="">
-                        
+
+                        <img class="img-fluid" src="https://kkl.daretolove.tw/content/img/phfont.svg" alt="">
+
                     </li>
                     <li class="fadeIndex">
                         <a href="" data-toggle="modal" data-target="#picModal">
@@ -197,38 +214,28 @@
         </div> -->
 
         <!-- winebook -->
-        <div class="winebook">
-            <div class="container">
+        <div class="wineArea">
+            <div class="container" style="max-width:700px">
                 <div class="section-title">
                     <h3 class="text-center">心情酒譜</h3>
                 </div>
-                <ul class="row no-gutters list-unstyled py-md-5">
-
-                    <li class="col-6 px-1 fadeIn offset-3 text-center">
-                        <a href="wine.html" class="text-dark">
-                            <img src="content/img/wine.png" alt="" class="img-fluid">
-                            <p style="background:#000;color:#fff;transform:translate(0,-50%)" class="d-inline-block p-2 m-auto">暖心系酒譜</p>
+                <div class="wineSelect">
+                    <div class="wine">
+                        <a href="winebook.html">
+                            <img src="content/img/wine.png?" alt="" class="img-fluid">
+                            <span style="color: black;padding:15px">
+                                <h3>甜酸系酒譜</h3> 
+                                酸梅 3 顆 <br>
+                                熱水 50 cc <br>
+                                38度 金門高粱酒 80cc <br>
+                                冰塊少許
+                            </span>
                         </a>
-                    </li>
-                    <!-- <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_1.png" alt="" class="img-fluid">
-                            <p>Gin/Vodka Martini</p>
-                        </a>
-                    </li>
-                    <li class="col-md-3 col-8 px-1 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_2.png" alt="" class="img-fluid">
-                            <p>Gin or Vodka and Tonic</p>
-                        </a>
-                    </li>
-                    <li class="col-md-3 col-8 px-1 offset-4 offset-md-0 fadeIn">
-                        <a href="" class="text-dark">
-                            <img src="content/img/wine_3.png" alt="" class="img-fluid">
-                            <p>Gin or Vodka and Tonic</p>
-                        </a>
-                    </li> -->
-                </ul>
+                    </div>
+                    
+                </div>
+                
+                
             </div>
 
         </div>
@@ -236,8 +243,7 @@
             <a href="http://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt="">
             </a>
-            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有　Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
-
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
         </footer>
         <!-- Modal -->
         <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalTitle" aria-hidden="true">
@@ -275,8 +281,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -293,21 +298,18 @@
 
 
     <!-- 標語 -->
-    <div class="position-fixed signgal p-3">
-        <img src="content/img/footer_fixed_font.svg" alt="" class="img-fluid">
+    <div class="position-fixed signgal p-1">
+        <img src="content/img/footer_fixed_font.svg?2" alt="" class="img-fluid">
     </div>
 
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
     <script src="script/all.js"></script>
     <script type="text/javascript">
-               
-            
         var ap = new APlayer({
             element: document.getElementById('aplayer1'),
             music: {
@@ -319,7 +321,7 @@
         });
 
 
-        $(function () {
+        $(function() {
 
             // 增加按鈕到player
             var playbtn = `<div class="player-btngroup">
@@ -329,10 +331,10 @@
                             <div>`
             $('#aplayer1').append(playbtn);
 
-            
+
             // 點劇照換照片
-            $('.dramaPics li a').each(function () {
-                $(this).click(function () {
+            $('.dramaPics li a').each(function() {
+                $(this).click(function() {
                     event.preventDefault();
                     var imgSrc = $(this).find('img').attr('src');
 
@@ -342,10 +344,10 @@
 
             })
 
-            $(window).scroll(function () {
+            $(window).scroll(function() {
 
 
-                $('.fadeIndex').each(function () {
+                $('.fadeIndex').each(function() {
                     // console.log(this);
                     var itemHeight = $(this).outerHeight() / 2;
                     // + $(this).outerHeight()
@@ -353,7 +355,9 @@
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     if (bottom_of_window > bottom_of_fadeIn) {
 
-                        $(this).animate({ 'opacity': '1' }, 1000);
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 1000);
 
                     }
                 })
@@ -362,7 +366,7 @@
 
         })
         // fb分享
-        $('body').on('click', '.shareBtn', function () {
+        $('body').on('click', '.shareBtn', function() {
             event.preventDefault();
             var image = $(this).parents().find('.modal-body img').attr('src');
             // console.log(image);
@@ -382,7 +386,7 @@
                 }),
                 href: 'http://kkl.daretolove.tw/#movie',
 
-            }, function (response) {
+            }, function(response) {
                 alert('分享完成！')
             });
         })
@@ -397,7 +401,7 @@
             $("#movieModal").modal('show');
         }
 
-        $("#movieModal").on('hidden.bs.modal', function (e) {
+        $("#movieModal").on('hidden.bs.modal', function(e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
 
