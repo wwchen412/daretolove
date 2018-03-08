@@ -16,7 +16,7 @@
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
-    <link rel="stylesheet" href="content/css/wine.css?t=99">
+    <link rel="stylesheet" href="content/css/wine.css?t=100">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
 
@@ -27,7 +27,7 @@
             Typekit.load({
                 async: true
             });
-        } catch (e) {}
+        } catch (e) { }
 
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,7 +46,7 @@
 
 <body>
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
                 appId: '288053411702507',
                 xfbml: true,
@@ -54,7 +54,7 @@
                 version: 'v2.5'
             });
         };
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {
                 return;
@@ -123,9 +123,28 @@
         <div class="container my-3">
             <div class="col-md-10  m-auto" style="padding-top: 30px">
                 <div id="aplayer1" class="aplayer"></div>
-                <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
-            </div>
-            <!--
+                <div class="ieonly row align-items-center">
+                    <div class="col-2">
+                        <img src="content/img/album.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-10">
+                        <audio src="content/Dare_to_love.mp3" controls style="width:100%"></audio>
+
+                    </div>
+                    <div class="col-3 offset-9">
+                        <div class="player-btngroup">
+                            <a href="content/Dare_to_love.mp3" class="btn btn-info" download style="width:100%">
+                                <small>Download MP3</small>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                  
+                </div>
+                <p class="" style="text-align:center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
+                <!--
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <div class="section-title col-12">
@@ -161,142 +180,146 @@
             
             </div>
        <p style="text-align: center;padding: 30px 0;font-size: 12px;">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
--->
-        </div>
+        -->
+            </div>
 
 
-        <footer class="text-center">
-            <a href="http://www.kkl.com.tw/" target="_blank">
-                <img src="content/img/logo.svg?2" alt="">
-            </a>
-            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
+            <footer class="text-center">
+                <a href="http://www.kkl.com.tw/" target="_blank">
+                    <img src="content/img/logo.svg?2" alt="">
+                </a>
+                <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有
+                    <br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
 
-        </footer>
-        <!-- Modal -->
+            </footer>
+            <!-- Modal -->
 
-        <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content  border-0" style="background:transparent">
-                    <div class="modal-header border-0 p-3">
-                        <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
-                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content  border-0" style="background:transparent">
+                        <div class="modal-header border-0 p-3">
+                            <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="modal-footer border-0">
-                        <a href="" class="shareBtn">
-                            <img src="content/img/share.svg" alt="">
-                        </a>
-                        <a href="content/Dare_to_love.mp3" class="downloadImg" download>
-                            <img src="content/img/download.svg" alt="">
-                        </a>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <a href="" class="shareBtn">
+                                <img src="content/img/share.svg" alt="">
+                            </a>
+                            <a href="content/Dare_to_love.mp3" class="downloadImg" download>
+                                <img src="content/img/download.svg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="movieModal2" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content  border-0" style="background:transparent">
-                    <div class="modal-header border-0 p-3">
-                        <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
-                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="modal fade" id="movieModal2" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content  border-0" style="background:transparent">
+                        <div class="modal-header border-0 p-3">
+                            <!-- <h5 class="modal-title text-light" id="exampleModalLongTitle">Modal title</h5> -->
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="modal-footer border-0">
-                        <a href="" class="shareBtn">
-                            <img src="content/img/share.svg" alt="">
-                        </a>
-                        <a href="content/Dare_to_love.mp3" class="downloadImg" download>
-                            <img src="content/img/download.svg" alt="">
-                        </a>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <a href="" class="shareBtn">
+                                <img src="content/img/share.svg" alt="">
+                            </a>
+                            <a href="content/Dare_to_love.mp3" class="downloadImg" download>
+                                <img src="content/img/download.svg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+        <!-- 標語 -->
+        <div class="position-fixed signgal p-1">
+            <img src="content/img/footer_fixed_font.svg?2" alt="" class="img-fluid">
+        </div>
+        <!-- jQuery JS 1.12.4 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="script/bootstrap.min.js"></script>
+        <script src="script/bootstrap.bundle.min.js"></script>
+        <script src="script/APlayer.min.js"></script>
+        <script src="script/jquery.cookie.js"></script>
+        <script src="script/all.js?t=99"></script>
 
-    </div>
-    <!-- 標語 -->
-    <div class="position-fixed signgal p-1">
-        <img src="content/img/footer_fixed_font.svg?2" alt="" class="img-fluid">
-    </div>
-    <!-- jQuery JS 1.12.4 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="script/bootstrap.min.js"></script>
-    <script src="script/bootstrap.bundle.min.js"></script>
-    <script src="script/APlayer.min.js"></script>
-    <script src="script/jquery.cookie.js"></script>
-    <script src="script/all.js?t=99"></script>
-
-    <script type="text/javascript">
-        var ap = new APlayer({
-            element: document.getElementById('aplayer1'),
-            music: {
-                title: 'Dare To Love',
-                author: '金門酒廠勇敢愛系列微電影主題曲',
-                pic: 'content/img/album.png',
-                url: 'content/Dare_to_love.mp3',
-            }
-        });
+        <script type="text/javascript">
+            var ap = new APlayer({
+                element: document.getElementById('aplayer1'),
+                music: {
+                    title: 'Dare To Love',
+                    author: '金門酒廠勇敢愛系列微電影主題曲',
+                    pic: 'content/img/album.png',
+                    url: 'content/Dare_to_love.mp3',
+                }
+            });
 
 
-        $(function() {
+            $(function () {
 
-            // 增加按鈕到player
-            var playbtn = `<div class="player-btngroup">
+                // 增加按鈕到player
+                var playbtn = `<div class="player-btngroup">
                                 <a href="content/Dare_to_love.mp3" class="btn btn-info" download>
                                     <small>Download MP3</small>
                                     </a>
                             <div>`
-            $('#aplayer1').append(playbtn);
+                $('#aplayer1').append(playbtn);
 
 
-            // 點劇照換照片
-            $('.dramaPics li a').each(function() {
-                $(this).click(function() {
-                    event.preventDefault();
-                    var imgSrc = $(this).find('img').attr('src');
+                // 點劇照換照片
+                $('.dramaPics li a').each(function () {
+                    $(this).click(function () {
+                        event.preventDefault();
+                        var imgSrc = $(this).find('img').attr('src');
 
-                    $('#picModal .modal-body img').attr('src', imgSrc);
-                    $('#picModal .downloadImg').attr('href', imgSrc);
+                        $('#picModal .modal-body img').attr('src', imgSrc);
+                        $('#picModal .downloadImg').attr('href', imgSrc);
+                    })
+
                 })
+
+                $(window).scroll(function () {
+
+
+                    $('.fadeIndex').each(function () {
+                        // console.log(this);
+                        var itemHeight = $(this).outerHeight() / 2;
+                        // + $(this).outerHeight()
+                        var bottom_of_fadeIn = $(this).position().top + itemHeight;
+                        var bottom_of_window = $(window).scrollTop() + $(window).height();
+                        if (bottom_of_window > bottom_of_fadeIn) {
+
+                            $(this).animate({
+                                'opacity': '1'
+                            }, 1000);
+
+                        }
+                    })
+                })
+
 
             })
 
-            $(window).scroll(function() {
-
-
-                $('.fadeIndex').each(function() {
-                    // console.log(this);
-                    var itemHeight = $(this).outerHeight() / 2;
-                    // + $(this).outerHeight()
-                    var bottom_of_fadeIn = $(this).position().top + itemHeight;
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-                    if (bottom_of_window > bottom_of_fadeIn) {
-
-                        $(this).animate({
-                            'opacity': '1'
-                        }, 1000);
-
-                    }
-                })
-            })
-
-
-        })
-
-    </script>
+        </script>
 
 
 </body>

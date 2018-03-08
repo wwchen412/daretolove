@@ -16,7 +16,7 @@
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
-    <link rel="stylesheet" href="content/css/wine.css?989999665">
+    <link rel="stylesheet" href="content/css/wine.css?989999666">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
     <!-- font -->
@@ -143,8 +143,29 @@
                     <h3 class="text-center">主題曲</h3>
                 </div>
                 <div class="col-md-10  m-auto" style="padding-top: 30px">
+                    
                     <div id="aplayer1" class="aplayer"></div>
-                    <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
+                    <div class="ieonly row align-items-center">
+                        <div class="col-2">
+                            <img src="content/img/album.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-10">
+                            <audio src="content/Dare_to_love.mp3" controls style="width:100%"></audio>
+                    
+                        </div>
+                        <div class="col-3 offset-9">
+                            <div class="player-btngroup">
+                                <a href="content/Dare_to_love.mp3" class="btn btn-info" download style="width:100%">
+                                    <small>Download MP3</small>
+                                </a>
+                    
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    </div>
+                    <p class="" style="text-align:center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
                 </div>
 
             </div>
@@ -301,7 +322,7 @@
                         </div>
                     </div>
                     <div class="modal-footer border-0">
-                        <a href="" class="shareBtn">
+                        <a href="" class="shareBtnVideo">
                             <img src="content/img/share.svg" alt="">
                         </a>
 
@@ -407,9 +428,15 @@
                 href: 'http://kkl.daretolove.tw/#movie',
 
             }, function(response) {
-                alert('分享完成！')
+                // alert('分享完成！')
             });
         })
+         $('body').on('click', '.shareBtnVideo', function () {
+                FB.ui({
+                 method: 'share',
+                 href: 'https://kkl.daretolove.tw/video.html',
+             }, function (response) { });
+            })
 
 
         // movie光箱展開

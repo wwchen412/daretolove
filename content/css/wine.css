@@ -2,6 +2,11 @@
 * {
   outline: 0; }
 
+.ieonly {
+  display: none;
+  visibility: hidden;
+  opacity: 0; }
+
 body,
 html {
   font-family: "source-han-serif-tc","Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
@@ -12,6 +17,7 @@ html {
     overflow: hidden; }
 
 .filterTitle {
+  -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
   -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(10 0 3px rgba(0, 0, 0, 0.7)); }
 
@@ -373,75 +379,75 @@ footer {
     transform: translate(100%, -40vh);
     opacity: 0; } }
   .winebookpage .bubble1 {
-    width: 51px;
-    height: 51px;
-    bottom: 6%;
-    right: 18%;
-    -webkit-animation: bubble 10s 10s infinite linear forwards;
-    animation: bubble 10s 10s infinite linear forwards; }
-  .winebookpage .bubble2 {
-    width: 48px;
-    height: 48px;
-    bottom: 6%;
-    right: 28%;
-    -webkit-animation: bubble 6s 7s infinite linear forwards;
-    animation: bubble 6s 7s infinite linear forwards; }
-  .winebookpage .bubble3 {
-    width: 33px;
-    height: 33px;
+    width: 43px;
+    height: 43px;
     bottom: 8%;
+    right: 43%;
+    -webkit-animation: bubble 10s 4s infinite linear forwards;
+    animation: bubble 10s 4s infinite linear forwards; }
+  .winebookpage .bubble2 {
+    width: 53px;
+    height: 53px;
+    bottom: 14%;
+    right: 29%;
+    -webkit-animation: bubble 7s 12s infinite linear forwards;
+    animation: bubble 7s 12s infinite linear forwards; }
+  .winebookpage .bubble3 {
+    width: 58px;
+    height: 58px;
+    bottom: 7%;
     right: 50%;
-    -webkit-animation: bubble 8s 10s infinite linear forwards;
-    animation: bubble 8s 10s infinite linear forwards; }
+    -webkit-animation: bubble 6s 10s infinite linear forwards;
+    animation: bubble 6s 10s infinite linear forwards; }
   .winebookpage .bubble4 {
     width: 43px;
     height: 43px;
-    bottom: 14%;
-    right: 34%;
-    -webkit-animation: bubble 10s 6s infinite linear forwards;
-    animation: bubble 10s 6s infinite linear forwards; }
+    bottom: 10%;
+    right: 23%;
+    -webkit-animation: bubble 6s 13s infinite linear forwards;
+    animation: bubble 6s 13s infinite linear forwards; }
   .winebookpage .bubble5 {
-    width: 59px;
-    height: 59px;
-    bottom: 9%;
-    right: 17%;
-    -webkit-animation: bubble 9s 5s infinite linear forwards;
-    animation: bubble 9s 5s infinite linear forwards; }
-  .winebookpage .bubble6 {
-    width: 30px;
-    height: 30px;
-    bottom: 6%;
-    right: 19%;
-    -webkit-animation: bubble 10s 10s infinite linear forwards;
-    animation: bubble 10s 10s infinite linear forwards; }
-  .winebookpage .bubble7 {
-    width: 49px;
-    height: 49px;
+    width: 47px;
+    height: 47px;
     bottom: 15%;
-    right: 41%;
-    -webkit-animation: bubble 10s 6s infinite linear forwards;
-    animation: bubble 10s 6s infinite linear forwards; }
-  .winebookpage .bubble8 {
-    width: 49px;
-    height: 49px;
-    bottom: 7%;
-    right: 35%;
-    -webkit-animation: bubble 10s 5s infinite linear forwards;
-    animation: bubble 10s 5s infinite linear forwards; }
-  .winebookpage .bubble9 {
-    width: 53px;
-    height: 53px;
-    bottom: 6%;
-    right: 6%;
+    right: 45%;
     -webkit-animation: bubble 7s 4s infinite linear forwards;
     animation: bubble 7s 4s infinite linear forwards; }
-  .winebookpage .bubble10 {
+  .winebookpage .bubble6 {
+    width: 40px;
+    height: 40px;
+    bottom: 8%;
+    right: 29%;
+    -webkit-animation: bubble 8s 8s infinite linear forwards;
+    animation: bubble 8s 8s infinite linear forwards; }
+  .winebookpage .bubble7 {
     width: 54px;
     height: 54px;
-    bottom: 13%;
-    right: 28%;
-    -webkit-animation: bubble 7s 6s infinite linear forwards;
-    animation: bubble 7s 6s infinite linear forwards; }
+    bottom: 14%;
+    right: 51%;
+    -webkit-animation: bubble 9s 6s infinite linear forwards;
+    animation: bubble 9s 6s infinite linear forwards; }
+  .winebookpage .bubble8 {
+    width: 25px;
+    height: 25px;
+    bottom: 6%;
+    right: 37%;
+    -webkit-animation: bubble 9s 6s infinite linear forwards;
+    animation: bubble 9s 6s infinite linear forwards; }
+  .winebookpage .bubble9 {
+    width: 59px;
+    height: 59px;
+    bottom: 15%;
+    right: 29%;
+    -webkit-animation: bubble 9s 8s infinite linear forwards;
+    animation: bubble 9s 8s infinite linear forwards; }
+  .winebookpage .bubble10 {
+    width: 23px;
+    height: 23px;
+    bottom: 11%;
+    right: 22%;
+    -webkit-animation: bubble 9s 10s infinite linear forwards;
+    animation: bubble 9s 10s infinite linear forwards; }
 
 .wave {
   position: absolute;
@@ -712,3 +718,19 @@ footer {
     width: 100%;
     height: 100%;
     background-size: cover; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .fadeIndex {
+    opacity: 1; }
+  .nav-item img {
+    height: 30px; }
+  #aplayer1 {
+    display: none; }
+  .ieonly {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    opacity: 1; }
+  header .title img {
+    height: 350px; } }
