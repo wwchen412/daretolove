@@ -26,7 +26,7 @@
             Typekit.load({
                 async: true
             });
-        } catch (e) {}
+        } catch (e) { }
 
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -45,7 +45,7 @@
 
 <body>
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
                 appId: '288053411702507',
                 xfbml: true,
@@ -53,7 +53,7 @@
                 version: 'v2.5'
             });
         };
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {
                 return;
@@ -143,7 +143,7 @@
                     <h3 class="text-center">主題曲</h3>
                 </div>
                 <div class="col-md-10  m-auto" style="padding-top: 30px">
-                    
+
                     <div id="aplayer1" class="aplayer"></div>
                     <div class="ieonly row align-items-center">
                         <div class="col-2">
@@ -151,19 +151,19 @@
                         </div>
                         <div class="col-10">
                             <audio src="content/Dare_to_love.mp3" controls style="width:100%"></audio>
-                    
+
                         </div>
                         <div class="col-3 offset-9">
                             <div class="player-btngroup">
                                 <a href="content/Dare_to_love.mp3" class="btn btn-info" download style="width:100%">
                                     <small>Download MP3</small>
                                 </a>
-                    
+
                             </div>
-                    
-                    
+
+
                         </div>
-                    
+
                     </div>
                     <p class="" style="text-align:center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
                 </div>
@@ -259,11 +259,12 @@
                         <a href="winebook.html">
                             <img src="content/img/wine.png?" alt="" class="img-fluid">
                             <span style="color: black;padding:15px">
-                                <h3>酸甜系酒譜</h3> 
-                                酸梅 3 顆 <br>
-                                熱水 50 cc <br>
-                                38度 金門高粱酒 80cc <br>
-                                冰塊少許<br>
+                                <h3>酸甜系酒譜</h3>
+                                酸梅 3 顆
+                                <br> 熱水 50 cc
+                                <br> 38度 金門高粱酒 80cc
+                                <br> 冰塊少許
+                                <br>
                                 <br>
                                 <span style="display: inline-block;padding: 2px 10px;background-color: red;border-radius: 99em;color: white;font-size: 12px">觀看酒譜影片</span>
                             </span>
@@ -280,7 +281,8 @@
             <a href="http://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt="">
             </a>
-            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有
+                <br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
         </footer>
         <!-- Modal -->
         <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalTitle" aria-hidden="true">
@@ -318,7 +320,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -341,7 +344,8 @@
 
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
@@ -360,35 +364,43 @@
         });
 
 
-        $(function() {
+        $(function () {
+
+            var userAgent, ieReg, ie;
+            userAgent = window.navigator.userAgent;
+            ieReg = /msie|Trident.*rv[ :]*11\./gi;
+            ie = ieReg.test(userAgent);
+
+            if (ie) {
+                $(".dramaPics li").each(function () {
+                    var $container = $(this),
+                        imgUrl = $container.find("img").prop("src");
+                    if (imgUrl) {
+                        $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("custom-object-fit");
+                    }
+                });
+            }
 
 
 
-            // 增加按鈕到player
-            var playbtn = `<div class="player-btngroup">
-                                <a href="content/Dare_to_love.mp3" class="btn btn-info" download>
-                                    <small>Download MP3</small>
-                                    </a>
-                            <div>`
-            $('#aplayer1').append(playbtn);
 
 
             // 點劇照換照片
-            $('.dramaPics li a').each(function() {
-                $(this).click(function() {
+            $('.dramaPics li a').each(function () {
+                $(this).click(function () {
                     event.preventDefault();
                     var imgSrc = $(this).find('img').attr('src');
-
+                    console.log(imgSrc);
                     $('#picModal .modal-body img').attr('src', imgSrc);
                     $('#picModal .downloadImg').attr('href', imgSrc);
                 })
 
             })
 
-            $(window).scroll(function() {
+            $(window).scroll(function () {
 
 
-                $('.fadeIndex').each(function() {
+                $('.fadeIndex').each(function () {
                     // console.log(this);
                     var itemHeight = $(this).outerHeight() / 2;
                     // + $(this).outerHeight()
@@ -404,10 +416,12 @@
                 })
             })
 
-
+            // 增加按鈕到player
+            var playbtn = '<div class="player-btngroup"><a href="content/Dare_to_love.mp3" class="btn btn-info" download><small>Download MP3</small> </a><div>'
+            $('#aplayer1').append(playbtn);
         })
         // fb分享
-        $('body').on('click', '.shareBtn', function() {
+        $('body').on('click', '.shareBtn', function () {
             event.preventDefault();
             var image = $(this).parents().find('.modal-body img').attr('src');
             // console.log(image);
@@ -427,16 +441,16 @@
                 }),
                 href: 'http://kkl.daretolove.tw/#movie',
 
-            }, function(response) {
+            }, function (response) {
                 // alert('分享完成！')
             });
         })
-         $('body').on('click', '.shareBtnVideo', function () {
-                FB.ui({
-                 method: 'share',
-                 href: 'https://kkl.daretolove.tw/video.html',
-             }, function (response) { });
-            })
+        $('body').on('click', '.shareBtnVideo', function () {
+            FB.ui({
+                method: 'share',
+                href: 'https://kkl.daretolove.tw/video.html',
+            }, function (response) { });
+        })
 
 
         // movie光箱展開
@@ -448,7 +462,7 @@
             $("#movieModal").modal('show');
         }
 
-        $("#movieModal").on('hidden.bs.modal', function(e) {
+        $("#movieModal").on('hidden.bs.modal', function (e) {
             $("#movieModal iframe").attr("src", $("#movieModal iframe").attr("src"));
         });
 

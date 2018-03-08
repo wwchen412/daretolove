@@ -1,0 +1,21 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .fadeIndex {
+    opacity: 1; }
+  .nav-item img {
+    height: 30px; }
+  #aplayer1 {
+    display: none; }
+  .ieonly {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    opacity: 1; }
+  header .title img {
+    height: 350px; }
+  .custom-object-fit .custom-object-fit {
+    position: relative;
+    background-size: cover;
+    background-position: center center; }
+    .custom-object-fit .custom-object-fit img {
+      opacity: 0; } }

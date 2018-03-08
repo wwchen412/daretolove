@@ -17,5 +17,20 @@
     header .title img{
         height: 350px;
     }
+   
+        .custom-object-fit {
+            position: relative;
+            background-size: cover;
+            background-position: center center;
+            img {
+              opacity: 0 !important;
+            }
+          }
+          .signgal img{
+              margin: 1px;
+          }
+          .wave .wave-svg-shape{
+              display: none;
+          }
 }
 
