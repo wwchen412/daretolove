@@ -10,7 +10,9 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
     <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" /><meta property="og:image:width" content="800" /><meta property="fb:app_id" content="288053411702507">
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
@@ -21,11 +23,31 @@
 
     <!-- font -->
     <script src="https://use.typekit.net/wnv0scu.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script> </head>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
                 autoLogAppEvents: true,
@@ -34,13 +56,17 @@
             });
         };
 
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "https://connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
     </script>
 
     <div id="wrap">
@@ -89,24 +115,22 @@
                 <div class="row align-items-center">
                     <div class="col-md-5">
                         <img src="content/img/wine_pc001.png?5" alt="" class="img-fluid">
-                       
+
                     </div>
                     <div class="col-md-7">
                         <div class="py-5 text-light">
                             <img src="content/img/wine_text01.png" alt="" class="img-fluid" style="width: 400px">
-                            <div class="embed-responsive embed-responsive-16by9" >
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HtQfo3n4LK4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen style="z-index:1"></iframe>
-                        </div>
-<!--                            <a href=""  data-toggle="modal" data-target="#movieModal" class="text-light"><img src="content/img/play_icon.svg" alt="" width="30" class="mr-2">點選觀看影片</a>-->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/HtQfo3n4LK4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="z-index:1"></iframe>
+                            </div>
+                            <!--                            <a href=""  data-toggle="modal" data-target="#movieModal" class="text-light"><img src="content/img/play_icon.svg" alt="" width="30" class="mr-2">點選觀看影片</a>-->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="wave">
                 <div class="wave-svg-shape">
-                    <svg version="1.1" id="_x37_38255fe-a9fa-4a5e-963a-8e97f59370ad" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
-                        x="0px" y="0px" viewBox="0 0 600 215.4" style="enable-background:new 0 0 600 215.4;" xml:space="preserve">
+                    <svg version="1.1" id="_x37_38255fe-a9fa-4a5e-963a-8e97f59370ad" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 215.4" style="enable-background:new 0 0 600 215.4;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
                                 fill: #fff;
@@ -152,8 +176,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HtQfo3n4LK4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HtQfo3n4LK4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -172,20 +195,20 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
     <script src="script/jquery.cookie.js"></script>
     <script src="script/all.js?t=99"></script>
-    
+
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             $('.wave-svg-shape').addClass('fill');
         })
+
     </script>
-    
+
 </body>
 
 </html>

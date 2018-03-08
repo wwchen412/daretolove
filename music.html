@@ -10,7 +10,9 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
     <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" /><meta property="og:image:width" content="800" /><meta property="fb:app_id" content="288053411702507">
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
@@ -18,19 +20,49 @@
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
 
-   <!-- font -->     <script src="https://use.typekit.net/wnv0scu.js"></script>     <script>try { Typekit.load({ async: true }); } catch (e) { }</script> </head>
+    <!-- font -->
+    <script src="https://use.typekit.net/wnv0scu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
-                xfbml: true, cookie: false,
+                xfbml: true,
+                cookie: false,
                 version: 'v2.5'
             });
         };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
     </script>
@@ -89,11 +121,11 @@
         <!-- Mv -->
 
         <div class="container my-3">
-<div class="col-md-10  m-auto" style="padding-top: 30px">
-                    <div id="aplayer1" class="aplayer"></div>
-                    <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
-                </div>
-<!--
+            <div class="col-md-10  m-auto" style="padding-top: 30px">
+                <div id="aplayer1" class="aplayer"></div>
+                <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
+            </div>
+            <!--
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <div class="section-title col-12">
@@ -141,7 +173,7 @@
 
         </footer>
         <!-- Modal -->
-       
+
         <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content  border-0" style="background:transparent">
@@ -153,8 +185,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -179,8 +210,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -202,15 +232,14 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
-    <script src="script/jquery.cookie.js"></script>     <script src="script/all.js?t=99"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/all.js?t=99"></script>
 
     <script type="text/javascript">
-
         var ap = new APlayer({
             element: document.getElementById('aplayer1'),
             music: {
@@ -222,7 +251,7 @@
         });
 
 
-        $(function () {
+        $(function() {
 
             // 增加按鈕到player
             var playbtn = `<div class="player-btngroup">
@@ -232,10 +261,10 @@
                             <div>`
             $('#aplayer1').append(playbtn);
 
-          
+
             // 點劇照換照片
-            $('.dramaPics li a').each(function () {
-                $(this).click(function () {
+            $('.dramaPics li a').each(function() {
+                $(this).click(function() {
                     event.preventDefault();
                     var imgSrc = $(this).find('img').attr('src');
 
@@ -245,10 +274,10 @@
 
             })
 
-            $(window).scroll(function () {
+            $(window).scroll(function() {
 
 
-                $('.fadeIndex').each(function () {
+                $('.fadeIndex').each(function() {
                     // console.log(this);
                     var itemHeight = $(this).outerHeight() / 2;
                     // + $(this).outerHeight()
@@ -256,7 +285,9 @@
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     if (bottom_of_window > bottom_of_fadeIn) {
 
-                        $(this).animate({ 'opacity': '1' }, 1000);
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 1000);
 
                     }
                 })
@@ -264,7 +295,6 @@
 
 
         })
-
 
     </script>
 

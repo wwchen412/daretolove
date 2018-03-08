@@ -8,7 +8,29 @@
     <title>請確認您的年齡 - Dare to love｜金門酒廠</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css?t=99">
-   <!-- font -->     <script src="https://use.typekit.net/wnv0scu.js"></script>     <script>try { Typekit.load({ async: true }); } catch (e) { }</script> </head>
+    <!-- font -->
+    <script src="https://use.typekit.net/wnv0scu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <div class="warning">
@@ -18,51 +40,60 @@
             <h2 class="mb-4">請確認您的年齡</h2>
             <p class="text-secondary small">進入這個網站，即表示你接受我們的 隱私與 Cookie 提醒</p>
             <div class="btn-groups mt-5">
-                <a  href="javascript:history.back()|alert('本網站需年滿18歲')" class="btn btn-outline-danger">
+                <a href="javascript:history.back()|alert('本網站需年滿18歲')" class="btn btn-outline-danger">
                 未滿18歲
             </a>
-            <a href="/" class="btn btn-outline-success ">
+                <a href="/" class="btn btn-outline-success ">
                 已滿18歲
             </a>
-        </div>
-           
+            </div>
+
         </div>
     </div>
     <!-- 標語 -->
     <div class="position-fixed signgal p-1">
         <img src="content/img/footer_fixed_font.svg?2" alt="" class="img-fluid">
     </div>
-<!-- jQuery JS 1.12.4 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="script/bootstrap.min.js"></script>
-<script src="script/bootstrap.bundle.min.js"></script>
-<script src="script/APlayer.min.js"></script>
-<script src="script/jquery.cookie.js"></script>
-<!-- <script src="script/all.js?t=99"></script> -->
-<script type="text/javascript">
-    $(function () {
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/APlayer.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <!-- <script src="script/all.js?t=99"></script> -->
+    <script type="text/javascript">
+        $(function() {
             if ($.cookie("name") == null) {
                 var _hostname = window.location.hostname; //取得網址
 
-                $(".warning .btn-outline-success").click(function () {
+                $(".warning .btn-outline-success").click(function() {
                     event.preventDefault();
-                    $.cookie("name", _hostname, { expires: 7, path: "/" });
-                    $.cookie("count", 1, { expires: 7, path: "/" });
+                    $.cookie("name", _hostname, {
+                        expires: 7,
+                        path: "/"
+                    });
+                    $.cookie("count", 1, {
+                        expires: 7,
+                        path: "/"
+                    });
                     window.location.href = "index.html";
                 });
 
             } else {
                 var _hostname = $.cookie("name");
                 var _count = $.cookie("count");
-                $.cookie("count", _count, { expires: 7, path: "/" });
+                $.cookie("count", _count, {
+                    expires: 7,
+                    path: "/"
+                });
 
             }
 
-           
+
         });
-</script>
+
+    </script>
 </body>
 
 </html>

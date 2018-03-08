@@ -10,7 +10,9 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
     <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" /><meta property="og:image:width" content="800" /><meta property="fb:app_id" content="288053411702507">
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
@@ -20,11 +22,33 @@
 
 
 
-   <!-- font -->     <script src="https://use.typekit.net/wnv0scu.js"></script>     <script>try { Typekit.load({ async: true }); } catch (e) { }</script> </head>
+    <!-- font -->
+    <script src="https://use.typekit.net/wnv0scu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
                 xfbml: true,
@@ -33,16 +57,20 @@
                 version: 'v2.7'
             });
         };
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; } js = d.createElement(s);
-            js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js";
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
         // 登入檢查
         function checkLoginState() {
-            FB.getLoginStatus(function (response) {
+            FB.getLoginStatus(function(response) {
                 statusChangeCallback(response);
             });
         }
@@ -65,7 +93,7 @@
 
         function KKLAPI() {
             // console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function (response) {
+            FB.api('/me', function(response) {
                 console.log('Successful login for: ' + response.name);
 
             });
@@ -160,12 +188,12 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.1.0/fabric.min.js"></script>
-    <script src="script/jquery.cookie.js"></script>     <script src="script/all.js?t=99"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/all.js?t=99"></script>
     <script type="text/javascript">
         // 定義畫布
         var canvas = new fabric.Canvas('c');
@@ -176,7 +204,7 @@
         // 使用者上傳的照片
         var img = imgElement;
         // ------------------------------------
-        
+
         // !需更換內容
         // 框框圖片連結替換成上一頁選擇的框
         // 
@@ -186,7 +214,7 @@
         // 讓圖片符合畫布大小
         function resizeimg() {
             // console.log(desktop.width);
-            fabric.Image.fromURL(img, function (img) {
+            fabric.Image.fromURL(img, function(img) {
                 canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
                     scaleX: desktop.clientWidth / img.width,
                     scaleY: desktop.clientHeight / img.height,
@@ -197,7 +225,7 @@
         }
         // 選擇的框框 
         function wireimg() {
-            fabric.Image.fromURL('content/img/frame01.png', function (img) {
+            fabric.Image.fromURL('content/img/frame01.png', function(img) {
                 var oImg = img.set({
                     left: 0,
                     bottom: 0,
@@ -209,7 +237,7 @@
 
             });
         }
-        
+
         // 增加文字欄
         var textbox = new fabric.Textbox('在此輸入心情', {
             left: 150,
@@ -229,6 +257,7 @@
 
         // 改變大小時重新計算畫布大小
         window.addEventListener('resize', resizeCanvas, false);
+
         function resizeCanvas() {
             canvas.setHeight(desktop.clientHeight);
             canvas.setWidth(desktop.clientWidth);
@@ -240,19 +269,16 @@
         // resize on init
         resizeCanvas();
         // 儲存canvas
-        
-        document.querySelector('.nextBtn').addEventListener('click', function (event) {
+
+        document.querySelector('.nextBtn').addEventListener('click', function(event) {
             event.preventDefault();
             // 要送出的base64
-             canvas.toDataURL();
+            canvas.toDataURL();
             console.log(canvas.toDataURL());
-             // 送出後轉跳
-                window.location.href = 'done.html';
+            // 送出後轉跳
+            window.location.href = 'done.html';
         })
 
-
-
-       
     </script>
 
 

@@ -10,87 +10,116 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
     <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" /><meta property="og:image:width" content="800" /><meta property="fb:app_id" content="288053411702507">
-    
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
+
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
     <link rel="stylesheet" href="content/css/wine.css?t=99">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
-    
 
 
-   <!-- font -->     
-   <script src="https://use.typekit.net/wnv0scu.js"></script>     
-   <script>try { Typekit.load({ async: true }); } catch (e) { }</script> 
-   </head>
+
+    <!-- font -->
+    <script src="https://use.typekit.net/wnv0scu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
-                xfbml: true, cookie: false,
+                xfbml: true,
+                cookie: false,
                 version: 'v2.5'
             });
         };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs);
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
     </script>
 
     <div id="wrap">
-    <!-- header -->
-    <div class="row no-gutters">
-        <div class="col-12">
-            <header>
-                <div class="nav-bar">
-                    <nav class="container d-md-flex ">
-                        <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
-                            <a href="/" class="d-inline-block p-2 text-light">
+        <!-- header -->
+        <div class="row no-gutters">
+            <div class="col-12">
+                <header>
+                    <div class="nav-bar">
+                        <nav class="container d-md-flex ">
+                            <div class="nav-item mr-md-auto d-flex d-md-block justify-content-between p-md-0 p-2">
+                                <a href="/" class="d-inline-block p-2 text-light">
                                 <img src="content/img/title.svg" alt="" style="width: 150px;-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));     filter: drop-shadow(10 0 3px rgba(0, 0, 0, 0.7))">
                             </a>
-                            <a class="d-inline-block d-md-none p-2 text-light" id="menu">
+                                <a class="d-inline-block d-md-none p-2 text-light" id="menu">
                                 <img src="content/img/menu.svg" alt="" width="30px">
                             </a>
-                        </div>
-                        <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
-                            <li class="nav-item">
-                                <a href="index.html" class="d-block p-2 active">首頁</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="video.html" class="d-block p-2">線上單元劇</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="gallery.html" class="d-block p-2"> 劇照下載</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="wine.html" class="d-block p-2">心情酒譜</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="music.html" class="d-block p-2">主題曲</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-    
-                <div class="container position-relative">
-    
-                    <div class="title position-absolute">
-                        <img src="/content/img/maintitle.svg" alt="" class="filterTitle">
+                            </div>
+                            <ul class="nav nav-stacked flex-column flex-md-row text-right text-md-center">
+                                <li class="nav-item">
+                                    <a href="index.html" class="d-block p-2 active">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="video.html" class="d-block p-2">線上單元劇</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="d-block p-2"> 劇照下載</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="wine.html" class="d-block p-2">心情酒譜</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="music.html" class="d-block p-2">主題曲</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                </div>
-    
-                <div class="heroImg">
-                    <img src="content/img/winebg.png" alt="" class="img-fluid d-none d-md-block">
-                    <img src="content/img/winebg.png" alt="" class="img-fluid d-block d-md-none">
-                </div>
-            </header>
+
+                    <div class="container position-relative">
+
+                        <div class="title position-absolute">
+                            <img src="/content/img/maintitle.svg" alt="" class="filterTitle">
+                        </div>
+                    </div>
+
+                    <div class="heroImg">
+                        <img src="content/img/winebg.png" alt="" class="img-fluid d-none d-md-block">
+                        <img src="content/img/winebg.png" alt="" class="img-fluid d-block d-md-none">
+                    </div>
+                </header>
+            </div>
+
         </div>
-    
-    </div>
 
         <!-- wine-->
         <div class="wineArea">
@@ -113,18 +142,18 @@
                             </span>
                         </a>
                     </div>
-                    
+
                 </div>
-                
-                
+
+
             </div>
 
         </div>
         <footer class="text-center">
             <a href="http://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt=""></a>
-                <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
-            
+            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
+
         </footer>
 
     </div>
@@ -134,12 +163,12 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
-    <script src="script/jquery.cookie.js"></script>     <script src="script/all.js?t=99"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/all.js?t=99"></script>
 
 
 
