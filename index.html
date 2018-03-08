@@ -16,7 +16,7 @@
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
-    <link rel="stylesheet" href="content/css/wine.css?t=2">
+    <link rel="stylesheet" href="content/css/wine.css?989999665">
     <link rel="stylesheet" href="content/css/APlayer.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png" />
     <!-- font -->
@@ -27,6 +27,18 @@
                 async: true
             });
         } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
 
     </script>
 </head>
@@ -112,7 +124,7 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
 
-                        <div class="row no-gutters slideblock">
+                        <div class="row no-gutters slideblock" style="margin-top: -130px;">
                             <div class="col-12">
                                 <a href="" data-toggle="modal" data-target="#movieModal">
                                     <img src="content/img/video.png" alt="" class="img-fluid" style="cursor: pointer;">
@@ -132,7 +144,9 @@
                 </div>
                 <div class="col-md-10  m-auto" style="padding-top: 30px">
                     <div id="aplayer1" class="aplayer"></div>
+                    <p style="text-align: center;padding: 30px 0;font-size: 12px;color: gray">歌曲版權屬金門酒廠實業股份有限公司，不授權另作其他商業用途使用</p>
                 </div>
+
             </div>
         </div>
         <!-- 劇照 -->
@@ -224,18 +238,20 @@
                         <a href="winebook.html">
                             <img src="content/img/wine.png?" alt="" class="img-fluid">
                             <span style="color: black;padding:15px">
-                                <h3>甜酸系酒譜</h3> 
+                                <h3>酸甜系酒譜</h3> 
                                 酸梅 3 顆 <br>
                                 熱水 50 cc <br>
                                 38度 金門高粱酒 80cc <br>
-                                冰塊少許
+                                冰塊少許<br>
+                                <br>
+                                <span style="display: inline-block;padding: 2px 10px;background-color: red;border-radius: 99em;color: white;font-size: 12px">觀看酒譜影片</span>
                             </span>
                         </a>
                     </div>
-                    
+
                 </div>
-                
-                
+
+
             </div>
 
         </div>
@@ -281,7 +297,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/thVWYeTbFqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K0-hweW2LaY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -309,8 +325,8 @@
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
 
-    <script src="script/jquery.cookie.js"></script>     '
-    <script src="script/all.js?t=3"></script>
+    <script src="script/jquery.cookie.js"></script> '
+    <script src="script/all.js?t=99"></script>
     <script type="text/javascript">
         var ap = new APlayer({
             element: document.getElementById('aplayer1'),
@@ -323,13 +339,13 @@
         });
 
 
-        $(function () {
-            
-           
+        $(function() {
+
+
 
             // 增加按鈕到player
             var playbtn = `<div class="player-btngroup">
-                                <a href="https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3" class="btn btn-info" download>
+                                <a href="content/Dare_to_love.mp3" class="btn btn-info" download>
                                     <small>Download MP3</small>
                                     </a>
                             <div>`

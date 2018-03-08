@@ -10,7 +10,9 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:title" content="Dare to Love 勇敢愛 我的心情我的酒" />
     <meta property="og:description" content="如果能夠重來一次，你還會選擇離開嗎？" />
-    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" /><meta property="og:image:width" content="800" /><meta property="fb:app_id" content="288053411702507">
+    <meta property="og:image" content="https://kkl.daretolove.tw/content/img/fbcover.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="fb:app_id" content="288053411702507">
 
     <title>Dare to Love 勇敢愛 我的心情我的酒</title>
     <link rel="stylesheet" href="content/css/main.css">
@@ -20,11 +22,33 @@
 
 
 
-   <!-- font -->     <script src="https://use.typekit.net/wnv0scu.js"></script>     <script>try { Typekit.load({ async: true }); } catch (e) { }</script> </head>
+    <!-- font -->
+    <script src="https://use.typekit.net/wnv0scu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115377158-1');
+
+    </script>
+</head>
 
 <body>
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '288053411702507',
                 xfbml: true,
@@ -33,16 +57,20 @@
                 version: 'v2.7'
             });
         };
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; } js = d.createElement(s);
-            js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js";
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
         // 登入檢查
         function checkLoginState() {
-            FB.getLoginStatus(function (response) {
+            FB.getLoginStatus(function(response) {
                 statusChangeCallback(response);
             });
         }
@@ -65,11 +93,12 @@
 
         function KKLAPI() {
             // console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function (response) {
+            FB.api('/me', function(response) {
                 console.log('Successful login for: ' + response.name);
 
             });
         }
+
         function shareImg() {
             let image = document.querySelector('.client-img img').getAttribute('src');
             FB.ui({
@@ -85,12 +114,11 @@
                         'og:image:height': '1200',
                     }
                 })
-            }, function (response) {
+            }, function(response) {
                 // Debug response (optional)
                 console.log(response);
             });
         }
-        
 
     </script>
 
@@ -143,8 +171,8 @@
             <div class="upload-section row">
 
                 <div class="btns d-flex justify-content-between  col-10 offset-1">
-                    
-                    <a href="https://kkl.daretolove.tw/content/img/doneImg.png"  download class="btn btn-primary text-light px-5 ml-auto mb-3 download">
+
+                    <a href="https://kkl.daretolove.tw/content/img/doneImg.png" download class="btn btn-primary text-light px-5 ml-auto mb-3 download">
                        
                         Download
                     </a>
@@ -152,7 +180,7 @@
                 <div class="col-10 offset-1">
                     <div class="img-wrap position-relative">
                         <div class="client-img" style="background:#eee;">
-                        <img src="https://kkl.daretolove.tw/content/img/doneImg.png" alt="" class="img-fluid d-block">
+                            <img src="https://kkl.daretolove.tw/content/img/doneImg.png" alt="" class="img-fluid d-block">
                         </div>
 
                         <div class="img-wire position-absolute" style="background-image:url('content/img/frame01.png')"></div>
@@ -168,17 +196,17 @@
                         </div>
                     </div>
                 </div>
-                
-                </div>
+
             </div>
         </div>
-        <footer class="text-center">
-            <a href="http://www.kkl.com.tw/" target="_blank">
+    </div>
+    <footer class="text-center">
+        <a href="http://www.kkl.com.tw/" target="_blank">
                 <img src="content/img/logo.svg?2" alt="">
             </a>
-            <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
+        <p class="text-secondary py-sm-3" style="font-size: 12px;">金門酒廠實業股份有限公司版權所有<br>Copyright © Kinmen Kaoliang Liquor Inc. All Rights Reserved.</p>
 
-        </footer>
+    </footer>
 
     </div>
     <!-- 標語 -->
@@ -187,24 +215,21 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/APlayer.min.js"></script>
-    <script src="script/jquery.cookie.js"></script>     <script src="script/all.js?t=3"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/all.js?t=3"></script>
     <script type="text/javascript">
-        
-    
-        $(function () {
+        $(function() {
             var downloadSrc = document.querySelector('.download'),
-            imgSrc = document.querySelector('.client-img img').getAttribute('src');
-            downloadSrc.setAttribute('href',imgSrc);
-           
+                imgSrc = document.querySelector('.client-img img').getAttribute('src');
+            downloadSrc.setAttribute('href', imgSrc);
+
 
 
         })
-
 
     </script>
 
